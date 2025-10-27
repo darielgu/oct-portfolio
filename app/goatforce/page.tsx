@@ -4,26 +4,26 @@ import CodeSnippet from "../../components/CodeSnippet";
 export default function GoatforcePage() {
   return (
     <div className="min-h-screen bg-white font-mono">
-      <main className="max-w-4xl mx-auto px-8 py-16">
+      <main className="max-w-3xl mx-auto px-6 py-12">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-6">
           <Link
             href="/"
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-250"
+            className="text-gray-600 hover:text-gray-900 transition-colors duration-250 text-sm"
           >
             ← back to home
           </Link>
-          <div className="text-gray-600 text-sm">August 2025</div>
+          <div className="text-gray-600 text-xs">August 2025</div>
         </div>
 
         {/* Main Title */}
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">
           Building Goatforce
         </h1>
 
         {/* Content Section */}
-        <div className="space-y-6 text-gray-700 leading-relaxed">
-          <div className="space-y-4">
+        <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
+          <div className="space-y-3">
             <p>
               Goatforce is a CRM dashboard powered by MCP (Model Context
               Protocol) servers, designed to be the one-stop shop for sales reps
@@ -42,11 +42,11 @@ export default function GoatforcePage() {
           </div>
 
           {/* Sub-heading */}
-          <h2 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+          <h2 className="text-xl font-bold text-gray-800 mt-6 mb-3">
             Why MCP Servers
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p>
               Goatforce was built entirely leveraging MCP servers for seamless
               integration with Salesforce APIs. The MCP architecture allows for
@@ -74,8 +74,8 @@ export default function GoatforcePage() {
           </div>
 
           {/* Code Snippet Component */}
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+          <div className="mt-6">
+            <h3 className="text-base font-semibold text-gray-800 mb-3">
               Websocket Challenge
             </h3>
             <CodeSnippet

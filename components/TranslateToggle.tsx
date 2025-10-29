@@ -57,7 +57,7 @@ export default function TranslateToggle() {
   }, [loaded, setLanguage]);
 
   return (
-    <div className="fixed right-3 bottom-3 md:top-4 md:bottom-auto z-50 flex items-center gap-2">
+    <div className="fixed right-1 bottom-1 md:top-4 md:bottom-auto z-50 flex items-center gap-2">
       {/* Hidden container for Google widget (required) */}
       <div id="google_translate_element" className="hidden" />
       <button

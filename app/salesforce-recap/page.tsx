@@ -23,27 +23,23 @@ export default function SalesforceRecapPage() {
         {/* Content Section */}
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
           <div className="space-y-3">
-            <p>
-              This summer was transformative. Landing an internship at
-              Salesforce felt like a dream come true, but I had no idea just how
-              much it would shape my perspective on the tech industry
-            </p>
+            <p>This summer was awesome.</p>
             <p>
               Coming from a first gen background I had 0 idea what an enterprise
               company would look/feel like. The scale was unlike anything I'd
-              experienced before, it's crazy to imagine changes to the platform
-              would affect millions of users
+              experienced before, it's crazy to imagine the software begin
+              Salesforce powers millions of users
             </p>
             <p>
-              It was a great experience to feel SF's ai/builder culture. I was
-              able to visit Roblox for their open house, Reddit for a Colorstack
-              event, & learn so much from my mangaer/mentor
+              It was a great experience to feel SF's ai/builder culture and
+              explore the city. I was able to visit Roblox for their open house,
+              Reddit for a Colorstack event, & learn so much from my
+              manager/mentor
             </p>
           </div>
-
           {/* Sub-heading */}
           <h2 className="text-xl font-bold text-gray-800 mt-6 mb-3">
-            Takeaways
+            takeaways
           </h2>
 
           <div className="space-y-3">
@@ -61,6 +57,16 @@ export default function SalesforceRecapPage() {
               pain points are the foundation for new features.
             </p>
           </div>
+          <h1 className="text-lg font-bold text-gray-800 mb-2">recs</h1>
+          <ul>
+            <li>Lous Cafe</li>
+            <li>Bottega in the mission</li>
+            <li>Golden Gate Park ping pong table </li>
+            <li>2nd street for clothes</li>
+            <li>Go touch grass theres so much in the city</li>
+            <li>Mission playground soccer field</li>
+            <li></li>
+          </ul>
         </div>
       </main>
     </div>

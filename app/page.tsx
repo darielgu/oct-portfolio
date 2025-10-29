@@ -189,23 +189,6 @@ export default function Home() {
                 {/* <div className="text-gray-500 text-xs">Summer 2025</div> */}
               </div>
             </a>
-            <a href="/game" className="block">
-              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
-                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/images/game.jpeg"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-gray-800 text-sm">
-                    what I wish I knew
-                  </h3>
-                  <p className="text-gray-600 text-xs">free Game</p>
-                </div>
-                <div className="text-gray-500 text-xs"></div>
-              </div>
-            </a>
             <a href="/philosophy" className="block">
               <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
                 <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
@@ -219,6 +202,23 @@ export default function Home() {
                     philosophy
                   </h3>
                   <p className="text-gray-600 text-xs">things to live by</p>
+                </div>
+                <div className="text-gray-500 text-xs"></div>
+              </div>
+            </a>
+            <a href="/game" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/game.jpeg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    what I wish I knew
+                  </h3>
+                  <p className="text-gray-600 text-xs">free Game</p>
                 </div>
                 <div className="text-gray-500 text-xs"></div>
               </div>

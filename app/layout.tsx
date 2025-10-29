@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Dariel Gutierrez - Portfolio",
   description:
     "Computer Science student at San Diego State University who enjoys building things",
+  icons: {
+    icon: "/images/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({

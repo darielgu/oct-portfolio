@@ -6,13 +6,12 @@ export default function Home() {
       <main className="max-w-3xl mx-auto px-6 py-12">
         {/* Header Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-xl font-bold text-gray-800 mb-4">
             Dariel Gutierrez
           </h1>
           <div className="space-y-3 text-gray-700 leading-relaxed text-sm">
             <p>
-              Hi! I'm Dariel. I study computer science at San Diego State
-              University and I love building software.
+              I'm dariel. I study computer science and I love building software
             </p>
             <p>
               Currently, I'm running{" "}
@@ -20,45 +19,19 @@ export default function Home() {
                 href="#"
                 className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
               >
-                WCO@SDSU,
-              </a>
-              working as a CS tutor & mentor @ the{" "}
+                WCO@SDSU
+              </a>{" "}
+              getting students @ SDSU locked in on their careers, working as a
+              CS tutor & mentor @ the
               <a
                 href="#"
                 className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
               >
-                MSLC,
+                MSLC
               </a>
-              and working on my own projects. On the side catch me enjoying
-              cars, music, and soccer.
+              and working on my own projects (checkout my github if interested)
             </p>
           </div>
-        </div>
-
-        {/* Recent Work Section */}
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-800 mb-3">
-            I recently:
-          </h2>
-          <ul className="space-y-1.5 text-gray-700 text-sm">
-            <li>
-              • built a full stack app to manage CRM deals using MCP servers @{" "}
-              <a
-                href="#"
-                className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
-              >
-                Salesforce
-              </a>{" "}
-            </li>
-            <li>
-              • built an ai tutor to manage your google drive notes using a
-              googledrive mcp server
-            </li>
-            <li>
-              • got hundreds of students @ SDSU locked in on their careers
-              through my career, resume, & technical workshops
-            </li>
-          </ul>
         </div>
 
         {/* Social Links */}
@@ -100,12 +73,16 @@ export default function Home() {
           <div className="space-y-3">
             <a href="/goatforce" className="block">
               <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
-                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded"></div>
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/goatforce.png"
+                    alt="Goatforce project"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-800 text-sm">
-                    Goatforce
+                    goatforce
                   </h3>
                   <p className="text-gray-600 text-xs">
                     MCP powered CRM dashboard, one stop shop for sales reps to
@@ -117,80 +94,100 @@ export default function Home() {
             </a>
 
             {/* Project 2 */}
-            <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-orange-400 rounded"></div>
+            <a href="/ai-tutor" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/ai-tutor.jpg"
+                    alt="AI Tutor project"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    ai tutor
+                  </h3>
+                  <p className="text-gray-600 text-xs">
+                    AI tutor for your google drive notes using a googledrive mcp
+                    server, create brainrot videos teaching you the material
+                  </p>
+                </div>
+                <div className="text-gray-500 text-xs">October 2025</div>
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800 text-sm">
-                  AI Tutor
-                </h3>
-                <p className="text-gray-600 text-xs">
-                  AI tutor for your google drive notes using a googledrive mcp
-                  server, create brainrot videos teaching you the material
-                </p>
-              </div>
-              <div className="text-gray-500 text-xs">October 2025</div>
-            </div>
+            </a>
 
             {/* Project 3 */}
-            <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                <div className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
-                  <div className="text-white text-xs font-mono">code</div>
+            <a href="/interview-prep" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/interview-prep.png"
+                    alt="Interview Prep project"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800 text-sm">
-                  Interview Prep
-                </h3>
-                <p className="text-gray-600 text-xs">
-                  Paste your resume, job link, and interviewer, parallel &
-                  claude sdk deep search that companies most asked questions,
-                  core values, and your interviewer
-                </p>
-              </div>
-              <div className="text-gray-500 text-xs">August 2025</div>
-            </div>
-            <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                <div className="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
-                  <div className="text-white text-xs font-mono">code</div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    interview prep
+                  </h3>
+                  <p className="text-gray-600 text-xs">
+                    Paste your resume, job link, and interviewer, parallel &
+                    claude sdk deep search your interviewer & position
+                  </p>
                 </div>
+                <div className="text-gray-500 text-xs">August 2025</div>
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800 text-sm">Mock Ai</h3>
-                <p className="text-gray-600 text-xs">
-                  Upload your resume & job description, get into a simulated
-                  mock interviewer rating your answers, tone, & body/facial
-                  expressions
-                </p>
+            </a>
+            <a href="/mock-ai" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/mock.png"
+                    alt="Mock AI project"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    mock ai
+                  </h3>
+                  <p className="text-gray-600 text-xs">
+                    Upload your resume & job description, get into a simulated
+                    mock interviewer rating your answers, tone, & body/facial
+                    expressions
+                  </p>
+                </div>
+                <div className="text-gray-500 text-xs">October 2025</div>
               </div>
-              <div className="text-gray-500 text-xs">October 2025</div>
-            </div>
+            </a>
           </div>
         </div>
-        {/* ETC projects / ideas section */}
+        {/* ETC  / ideas section */}
         <div>
           <h2 className="text-lg font-semibold text-gray-800 mb-4 mt-6">
             random
           </h2>
           <div className="space-y-3">
-            {/* Salesforce Recap */}
-            <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded"></div>
+            <a href="/salesforce-recap" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/recap.jpeg"
+                    alt="Summer 2025 Recap"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    summer 2025
+                  </h3>
+                  <p className="text-gray-600 text-xs">
+                    Deep dive into my summer @ salesforce
+                  </p>
+                </div>
+                <div className="text-gray-500 text-xs">Summer 2025</div>
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800 text-sm">
-                  Summer 2025 Recap
-                </h3>
-                <p className="text-gray-600 text-xs">
-                  Deep dive into my summer @ salesforce
-                </p>
-              </div>
-              <div className="text-gray-500 text-xs">Summer 2025</div>
-            </div>
+            </a>
 
             {/* Random thoughts */}
             {/* <div className="border border-gray-300 rounded-lg p-4 flex items-center space-x-4">

@@ -32,9 +32,9 @@ const page = () => {
               have accomplished
             </li>
             <li>
-              <span className="font-semibold">Be nice</span> <br /> People are
-              always be going through something, try to spread kindness and be a
-              positive impact on others
+              <span className="font-semibold">Be nice</span> <br /> You never
+              know what people are going through, try to spread kindness and be
+              a positive impact on others
             </li>
             <li>
               <span className="font-semibold">You can just do things</span>{" "}

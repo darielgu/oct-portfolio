@@ -28,15 +28,14 @@ export default function MockAIPage() {
               comprehensive feedback on candidates' performance across multiple
               dimensions. The core idea was to create a realistic interview
               environment that could evaluate not just answers, but also tone,
-              body language, and facial expressions.
+              body language, and facial expressions. FYI this one the SDSU AWS
+              Ai Hackathon
             </p>
             <p>
               The challenge was building a system that could accurately assess
               both verbal and non-verbal communication cues while providing
-              constructive feedback. We integrated computer vision for facial
-              expression analysis, natural language processing for answer
-              evaluation, and audio processing for tone analysis, creating a
-              holistic assessment platform.
+              constructive feedback. We used based 64 for image to string and
+              Amazon bedrock for all LLM calls
             </p>
           </div>
 
@@ -47,15 +46,8 @@ export default function MockAIPage() {
 
           <div className="space-y-3">
             <p>
-              The biggest challenge was achieving accurate facial expression
-              recognition across different lighting conditions, camera angles,
-              and user setups. We needed to develop robust computer vision
-              models that could work reliably in various environments while
-              maintaining user privacy and data security.
-            </p>
-            <p>
-              Another major issue was creating realistic interview scenarios
-              that could adapt to different industries and roles. We implemented
+              The biggest challenge creating realistic interview scenarios that
+              could adapt to different industries and roles. We implemented
               dynamic question generation based on job descriptions and company
               culture, ensuring that each mock interview felt authentic and
               relevant to the candidate's target position.

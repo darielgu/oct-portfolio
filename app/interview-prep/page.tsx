@@ -54,22 +54,6 @@ export default function InterviewPrepPage() {
               systems and API integrations that could handle rate limiting and
               data quality issues.
             </p>
-            <p>
-              Another major issue was ensuring accuracy and relevance of the
-              insights provided. With so much data available, we needed to
-              implement sophisticated filtering and ranking algorithms to ensure
-              candidates received the most relevant and actionable information.
-              This required developing custom NLP models to understand job
-              descriptions and match them with candidate profiles.
-            </p>
-            <p>
-              Finally, we faced the challenge of maintaining up-to-date
-              information. Company structures, interviewer roles, and job
-              requirements change frequently. We implemented automated
-              monitoring systems that track changes and update candidate
-              profiles accordingly, ensuring the preparation materials remain
-              current and relevant.
-            </p>
           </div>
 
           {/* YouTube Demo */}

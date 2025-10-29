@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dariel Gutierrez - Portfolio",
+  title: "about me",
   description:
     "Computer Science student at San Diego State University who enjoys building things",
   icons: {

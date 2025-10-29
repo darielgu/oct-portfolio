@@ -28,15 +28,15 @@ export default function InterviewPrepPage() {
               stressful process of interview preparation into a streamlined,
               data-driven experience. The core idea was to eliminate guesswork
               by providing candidates with deep insights into their specific
-              interviewer and position requirements.
+              interviewer, company and position requirements.
             </p>
             <p>
-              The challenge was building a system that could analyze vast
-              amounts of company data, interviewer profiles, and position
-              requirements to provide personalized preparation strategies. We
-              used Claude SDK for deep search capabilities, allowing candidates
-              to paste their resume, job link, and interviewer information to
-              receive tailored insights and preparation materials.
+              Using the parralel api as a Claude sdk tool we were able to scrape
+              the interviewers linkedin, the company & positions most asked
+              questions, core values, and any other data on the internet that
+              could give you a better chance at getting hired. On generation we
+              provide the user a comprehensive study guide on how to ace their
+              interview.
             </p>
           </div>
 
@@ -47,12 +47,11 @@ export default function InterviewPrepPage() {
 
           <div className="space-y-3">
             <p>
-              The biggest challenge was data aggregation and processing. We
-              needed to collect information from multiple sources including
-              LinkedIn profiles, company websites, Glassdoor reviews, and
-              industry databases. This required building robust web scraping
-              systems and API integrations that could handle rate limiting and
-              data quality issues.
+              This was built in 5 hours @ the UCSD x SDx hackathon, which was
+              honestly our biggest challenge. That 5 hour time crunch meant no
+              going back on our original plan and pushing out code every couple
+              of minutes. All in all it was a great experience getting to meet
+              some of the UCSD students.
             </p>
           </div>
 

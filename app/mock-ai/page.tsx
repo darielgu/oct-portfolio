@@ -24,18 +24,16 @@ export default function MockAIPage() {
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
           <div className="space-y-3">
             <p>
-              Mock AI is an advanced interview simulation platform that provides
-              comprehensive feedback on candidates' performance across multiple
-              dimensions. The core idea was to create a realistic interview
-              environment that could evaluate not just answers, but also tone,
-              body language, and facial expressions. FYI this one the SDSU AWS
-              Ai Hackathon
+              Mock AI won the SDSU x AWS Ai hackathon! It is a interview
+              simulation platform that provides comprehensive feedback on
+              candidates' performance across multiple dimensions. The core idea
+              was to create a realistic interview environment that could
+              evaluate not just answers, but also tone, body language, and
+              facial expressions.
             </p>
             <p>
-              The challenge was building a system that could accurately assess
-              both verbal and non-verbal communication cues while providing
-              constructive feedback. We used based 64 for image to string and
-              Amazon bedrock for all LLM calls
+              We used Next & TypeScript, Fastapi, base 64, Amazon bedrock,
+              dynamo, lambda, & transcribe!
             </p>
           </div>
 
@@ -46,11 +44,11 @@ export default function MockAIPage() {
 
           <div className="space-y-3">
             <p>
-              The biggest challenge creating realistic interview scenarios that
-              could adapt to different industries and roles. We implemented
-              dynamic question generation based on job descriptions and company
-              culture, ensuring that each mock interview felt authentic and
-              relevant to the candidate's target position.
+              The biggest challenge was creating realistic interview scenarios
+              that could adapt to different industries and roles. We implemented
+              dynamic question generation based on job descriptions, resume, and
+              company culture, ensuring that each mock interview felt authentic
+              and relevant to the candidate's target position.
             </p>
             <p>
               Finally, we faced the challenge of providing actionable feedback

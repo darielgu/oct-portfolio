@@ -16,20 +16,21 @@ export default function Home() {
             <p>
               Currently, I'm running{" "}
               <a
-                href="#"
+                href="https://sdsu.worldcomputing.org/"
                 className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
               >
                 WCO@SDSU
               </a>{" "}
-              getting students @ SDSU locked in on their careers, working as a
-              CS tutor & mentor @ the
+              where I help students @ SDSU break into the tech industry, working
+              as a CS tutor & mentor at the {""}
               <a
-                href="#"
+                href="https://mslc.sdsu.edu/"
                 className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
               >
                 MSLC
               </a>
-              and working on my own projects (checkout my github if interested)
+              {""} and working on my own projects (checkout my github if
+              interested)
             </p>
           </div>
         </div>
@@ -185,7 +186,25 @@ export default function Home() {
                     Deep dive into my summer @ salesforce
                   </p>
                 </div>
-                <div className="text-gray-500 text-xs">Summer 2025</div>
+                {/* <div className="text-gray-500 text-xs">Summer 2025</div> */}
+              </div>
+            </a>
+            <a href="/game" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/game.jpeg"
+                    alt="Summer 2025 Recap"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    what I wish I knew
+                  </h3>
+                  <p className="text-gray-600 text-xs">free Game</p>
+                </div>
+                <div className="text-gray-500 text-xs"></div>
               </div>
             </a>
 

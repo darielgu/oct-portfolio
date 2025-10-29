@@ -64,15 +64,18 @@ export default function MockAIPage() {
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Demo Video
             </h3>
-            <iframe
-              className="mx-auto block mt-3 rounded-lg"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/AXmoAowGulk?si=DNfxZModykBQx97Y"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            <div
+              className="relative w-full overflow-hidden rounded-lg mt-3"
+              style={{ paddingTop: "56.25%" }}
+            >
+              <iframe
+                className="absolute left-0 top-0 h-full w-full"
+                src="https://www.youtube.com/embed/AXmoAowGulk?si=DNfxZModykBQx97Y"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </main>

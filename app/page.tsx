@@ -194,7 +194,6 @@ export default function Home() {
                 <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/game.jpeg"
-                    alt="Summer 2025 Recap"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -207,21 +206,23 @@ export default function Home() {
                 <div className="text-gray-500 text-xs"></div>
               </div>
             </a>
-
-            {/* Random thoughts */}
-            {/* <div className="border border-gray-300 rounded-lg p-4 flex items-center space-x-4">
-              <div className="w-16 h-16 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-orange-400 rounded"></div>
+            <a href="/philosophy" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/life.jpeg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    philosophy
+                  </h3>
+                  <p className="text-gray-600 text-xs">things to live by</p>
+                </div>
+                <div className="text-gray-500 text-xs"></div>
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800">AI Tutor</h3>
-                <p className="text-gray-600">
-                  AI tutor for your google drive notes using a googledrive mcp
-                  server, create brainrot videos teaching you the material
-                </p>
-              </div>
-              <div className="text-gray-500 text-sm">October 2025</div>
-            </div> */}
+            </a>
           </div>
         </div>
       </main>

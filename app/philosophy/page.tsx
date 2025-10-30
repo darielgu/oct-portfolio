@@ -42,6 +42,12 @@ const page = () => {
               circumstance seize what is in front of you & prove your work by
               action
             </li>
+            <li>
+              <span className="font-semibold">Momento Mori</span> <br /> No mean
+              to be cringe but remember that you will die. This awareness will
+              help you live a meaningful life and prioritize what truly matters
+              (fammily, goals, etc).
+            </li>
           </ol>
         </div>
       </main>

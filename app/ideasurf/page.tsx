@@ -36,7 +36,7 @@ export default function Ideasurf() {
               workflow is to scrape YC, A16z, etc - seed database with project
               vector embeddings - query database with your idea - get similar
               ideas!
-              <br />I used the following technologies
+              <br />
               <ul className="list-disc list-inside">
                 <li>Next.js</li>
                 <li>FastAPI</li>

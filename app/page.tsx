@@ -93,25 +93,26 @@ export default function Home() {
               </div>
             </a>
 
-            <a href="/goatforce" className="block">
+            <a href="/mock-ai" className="block">
               <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
                 <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/images/goatforce.png"
-                    alt="Goatforce project"
+                    src="/images/mock.png"
+                    alt="Mock AI project"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-800 text-sm">
-                    goatforce
+                    mock ai
                   </h3>
                   <p className="text-gray-600 text-xs">
-                    MCP powered CRM dashboard, one stop shop for sales reps to
-                    manage their deals
+                    Upload your resume & job description, get into a simulated
+                    mock interviewer rating your answers, tone, & body/facial
+                    expressions
                   </p>
                 </div>
-                <div className="text-gray-500 text-xs">August 2025</div>
+                <div className="text-gray-500 text-xs">October 2025</div>
               </div>
             </a>
 
@@ -160,26 +161,25 @@ export default function Home() {
                 <div className="text-gray-500 text-xs">August 2025</div>
               </div>
             </a>
-            <a href="/mock-ai" className="block">
+            <a href="/goatforce" className="block">
               <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
                 <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/images/mock.png"
-                    alt="Mock AI project"
+                    src="/images/goatforce.png"
+                    alt="Goatforce project"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-800 text-sm">
-                    mock ai
+                    goatforce
                   </h3>
                   <p className="text-gray-600 text-xs">
-                    Upload your resume & job description, get into a simulated
-                    mock interviewer rating your answers, tone, & body/facial
-                    expressions
+                    MCP powered CRM dashboard, one stop shop for sales reps to
+                    manage their deals
                   </p>
                 </div>
-                <div className="text-gray-500 text-xs">October 2025</div>
+                <div className="text-gray-500 text-xs">August 2025</div>
               </div>
             </a>
           </div>

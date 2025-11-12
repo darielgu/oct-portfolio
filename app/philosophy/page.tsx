@@ -16,7 +16,7 @@ const page = () => {
 
         {/* Main Title */}
         <h1 className="text-xl font-bold text-gray-800 mb-6">
-          Life & stuff from books
+          life & stuff from books
         </h1>
 
         {/* Content Section */}

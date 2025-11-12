@@ -17,7 +17,7 @@ export default function game() {
 
         {/* Main Title */}
         <h1 className="text-xl font-bold text-gray-800 mb-6">
-          what I wish freshman me knew
+          what i wish freshman me knew
         </h1>
 
         {/* Content Section */}

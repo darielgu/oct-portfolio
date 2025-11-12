@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CodeSnippet from "../../components/CodeSnippet";
 
-export default function GoatforcePage() {
+export default function Ideasurf() {
   return (
     <div className="min-h-screen bg-white font-mono">
       <main className="max-w-3xl mx-auto px-6 py-12">
@@ -77,6 +77,10 @@ export default function GoatforcePage() {
                 https://ideasurf.xyz
               </a>
             </p>
+
+            <div className="relative w-full overflow-hidden rounded-lg mt-1">
+              <img src="/images/vector.gif"></img>
+            </div>
           </div>
         </div>
       </main>

@@ -26,22 +26,22 @@ export default function hireme() {
           <div className="space-y-3">
             <h3>This won most complete solution @ Innovate 4 SDSU Hackathon</h3>
             <p>
-              HireMe is the one-stop shop for job seekers to prepare for
-              interviews, its a combination of similar individual produces i've
-              made before but combined into one platform. The core idea was to
-              eliminate the friction between different tools and create a
-              unified interface that understands natural language commands.
+              HireMe is a one stop platform for job seekers to prep for
+              interviews. It’s a consolidation of several tools I previously
+              built, now combined into a single interface that understands
+              natural-language commands and removes the friction of jumping
+              between apps.
             </p>
             <p>
-              You upload your resume, interviewers linkedin, and job posting. We
-              scrape reddit, glass door, etc to provide you with the most
-              relevant interview resources. You can see things like: most asked
-              questions, company culture, salary expectations, things to speak
-              to your interviewer about based on their linkedin, and company
-              news. Additionally we have a 7 day study plan, interview process
-              overview, the emails & linkedin of people in the current role
-              you're applying to, and a simulated mock interview based on
-              scraped data and your resume!
+              You upload your résumé, the interviewer’s LinkedIn profile, and
+              the job posting. We scrape Reddit, Glassdoor, and other sources to
+              surface the most relevant interview insights — including common
+              interview questions, company culture notes, salary expectations,
+              conversation hooks based on the interviewer’s background, and
+              recent company news. The platform also provides a 7-day study
+              plan, an overview of the interview process, contact information
+              for people currently in the role, and a mock interview simulation
+              generated from scraped data and your résumé.
             </p>
           </div>
 
@@ -54,10 +54,10 @@ export default function hireme() {
             <p>
               When creating HireMe I realized our parallel api + webscraping
               pipeline was taking up to 45 seconds to process a single request.
-              I decided to build introudce multithrreading to be able to run
-              these process in parallel rather than sequentially. After
-              implementing multithreading I cut down pipeline time by 30-45
-              seconds a massive improvement
+              I decided to introduce multithreading to be able to run these
+              processes in parallel rather than sequentially. After implementing
+              multithreading I cut down pipeline time by 30-45 seconds, a
+              massive improvement.
             </p>
           </div>
 

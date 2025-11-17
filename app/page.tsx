@@ -72,6 +72,27 @@ export default function Home() {
           </h2>
           {/* Project 1` */}
           <div className="space-y-3">
+            <a href="/hireme" className="block">
+              <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
+                <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/hireme.png"
+                    alt="HireMe project"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-800 text-sm">
+                    hireme
+                  </h3>
+                  <p className="text-gray-600 text-xs">
+                    Interview prep platform: everything you need to ace your
+                    next interview
+                  </p>
+                </div>
+                <div className="text-gray-500 text-xs">November 2025</div>
+              </div>
+            </a>
             <a href="/ideasurf" className="block">
               <div className="border border-gray-300 rounded-lg p-3 flex items-center space-x-3 hover:border-gray-400 transition-colors duration-250">
                 <div className="w-12 h-12 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">

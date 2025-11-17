@@ -13,7 +13,7 @@ export default function hireme() {
           >
             ← back to home
           </Link>
-          <div className="text-gray-600 text-xs">August 2025</div>
+          <div className="text-gray-600 text-xs">November 2025</div>
         </div>
 
         {/* Main Title */}

@@ -17,9 +17,7 @@ export default function Ideasurf() {
         </div>
 
         {/* Main Title */}
-        <h1 className="text-xl font-bold text-gray-800 mb-6">
-          Building ideasurf
-        </h1>
+        <h1 className="text-xl font-bold text-gray-800 mb-6">Pelosi Process</h1>
 
         {/* Content Section */}
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">

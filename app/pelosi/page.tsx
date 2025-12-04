@@ -25,27 +25,22 @@ export default function Ideasurf() {
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
           <div className="space-y-3">
             <p>
-              Ideasurf is a platform that helps you generate ideas for your
-              startup. The core idea was to eliminate the friction between
-              different tools and create a unified interface that understands
-              natural language commands and finds all the projects on the
-              internet similar to your idea.
-            </p>
-            <p>
-              Honestly had a great time building this project, the basic
-              workflow is to scrape YC, A16z, etc - seed database with project
-              vector embeddings - query database with your idea - get similar
-              ideas!
+              The Pelosi Portfolio is a web application that tracks the stock
+              trades made by Nancy Pelosi and her husband, using publicly
+              available data from the PDRS reports. The application runs a CRON
+              job on this website to scrape the latest trades, pings all users
+              via email with the exact trade details, and displays the data in
+              an easy-to-read format.
             </p>
             <br />
             <ul className="list-disc list-inside">
+              <li>SMTS</li>
               <li>Next.js</li>
               <li>FastAPI</li>
               <li>Selenium</li>
               <li>TypeScript</li>
               <li>SupaBase</li>
               <li>Vercel</li>
-              <li>OpenAI Embeddings</li>
             </ul>
           </div>
 
@@ -54,33 +49,27 @@ export default function Ideasurf() {
 
           <div className="space-y-3">
             <p>
-              In the future I plan to scrape more sources like Crunchbase,
-              PitchBook, and other startup databases to get a more comprehensive
-              list of ideas. I also plan to add user voting & ranking to the
-              ideas to help prioritize the most popular ideas.
+              In the future I plan to scrape more congress members so we can see
+              and test other portfolios and potentially add an AI model trained
+              on pelosis trading habits and back test it against the real
+              market.
             </p>
           </div>
 
-          {/* Code Snippet Component */}
-          {/* YouTube Demo */}
           <div className="mt-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Deployed Website
             </h3>
             <p>
               <a
-                href="https://ideasurf.xyz"
+                href="https://pelosi.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline transition-all duration-250 hover:bg-gray-200 px-1 py-0.5 rounded text-align-center"
               >
-                https://ideasurf.xyz
+                https://pelosi.vercel.app/
               </a>
             </p>
-
-            <div className="relative w-full overflow-hidden rounded-lg mt-1">
-              <img src="/images/vector.gif"></img>
-            </div>
           </div>
         </div>
       </main>

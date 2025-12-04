@@ -24,19 +24,20 @@ export default function AITutorPage() {
         <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
           <div className="space-y-3">
             <p>
-              AI Tutor is an intelligent learning companion that transforms your
-              Google Drive notes into engaging educational content. The core
-              idea was to eliminate the monotony of traditional studying by
-              creating personalized "brainrot" style videos that make learning
-              addictive and memorable.
+              AI Tutor is an intelligent learning companion that connects to
+              your Google Drive using an MCP server I built, turning notes into
+              engaging educational content. The core idea was to eliminate the
+              monotony of traditional studying by creating smart AI agents who
+              know everthing about your notes & to create personalized
+              "brainrot" style videos that make learning addictive and
+              memorable.
             </p>
             <p>
               The challenge was building a system that could understand complex
               academic material and repackage it into digestible, entertaining
-              content while maintaining educational accuracy. We used MCP
-              servers to seamlessly integrate with Google Drive, allowing
-              students to simply upload their notes and receive personalized
-              video lessons tailored to their learning style.
+              content while maintaining educational accuracy. But with advanced
+              NLP tools and adaptive learning algorithms, AI Tutor creates a
+              unique study experience tailored to each student's needs.
             </p>
           </div>
 
@@ -62,18 +63,10 @@ export default function AITutorPage() {
               patterns. This required implementing smart content prioritization
               algorithms.
             </p>
-            <p>
-              Finally, we faced the challenge of maintaining engagement over
-              time. Students would initially be excited about the "brainrot"
-              style videos, but we needed to ensure the novelty didn't wear off.
-              We implemented adaptive content generation that learns from user
-              preferences and continuously evolves the video style to keep
-              students engaged.
-            </p>
           </div>
 
           {/* YouTube Demo */}
-          {/* <div className="mt-6">
+          <div className="mt-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-3">
               Demo Video
             </h3>
@@ -81,12 +74,12 @@ export default function AITutorPage() {
               className="mx-auto block mt-3 rounded-lg"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/ihNwD7CMXH0?si=fz7Y1i2TFRue1f7h"
               title="AI Tutor Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
-          </div> */}
+          </div>
         </div>
       </main>
     </div>

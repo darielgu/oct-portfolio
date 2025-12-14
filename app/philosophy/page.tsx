@@ -2,26 +2,26 @@ import React from "react";
 import Link from "next/link";
 const page = () => {
   return (
-    <div className="min-h-screen bg-white font-mono">
+    <div className="min-h-screen bg-white">
       <main className="max-w-3xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <Link
             href="/"
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-250 text-sm"
+            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
           >
             ← back to home
           </Link>
         </div>
 
         {/* Main Title */}
-        <h1 className="text-xl font-bold text-gray-800 mb-6">
+        <h1 className="text-xl font-bold text-black mb-6">
           life & stuff from books
         </h1>
 
         {/* Content Section */}
         {/* Content Section */}
-        <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
+        <div className="space-y-4 text-black leading-relaxed text-sm">
           <ol className="list-decimal pl-6 space-y-3">
             <li>
               <span className="font-semibold">

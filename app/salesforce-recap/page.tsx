@@ -2,26 +2,26 @@ import Link from "next/link";
 
 export default function SalesforceRecapPage() {
   return (
-    <div className="min-h-screen bg-white font-mono">
+    <div className="min-h-screen bg-white">
       <main className="max-w-3xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <Link
             href="/"
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-250 text-sm"
+            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
           >
             ← back to home
           </Link>
-          <div className="text-gray-600 text-xs">Summer 2025</div>
+          <div className="text-black text-xs">Summer 2025</div>
         </div>
 
         {/* Main Title */}
-        <h1 className="text-xl font-bold text-gray-800 mb-6">
+        <h1 className="text-xl font-bold text-black mb-6">
           Summer 2025 Recap: My Journey at Salesforce
         </h1>
 
         {/* Content Section */}
-        <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
+        <div className="space-y-4 text-black leading-relaxed text-sm">
           <div className="space-y-3">
             <p>This summer was awesome.</p>
             <p>
@@ -38,7 +38,7 @@ export default function SalesforceRecapPage() {
             </p>
           </div>
           {/* Sub-heading */}
-          <h2 className="text-xl font-bold text-gray-800 mt-6 mb-3">
+          <h2 className="text-xl font-bold text-black mt-6 mb-3">
             takeaways
           </h2>
 
@@ -57,7 +57,7 @@ export default function SalesforceRecapPage() {
               pain points are the foundation for new features.
             </p>
           </div>
-          <h1 className="text-lg font-bold text-gray-800 mb-2">recs</h1>
+          <h1 className="text-lg font-bold text-black mb-2">recs</h1>
           <ul>
             <li>Lous Cafe</li>
             <li>Bottega in the mission</li>

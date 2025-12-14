@@ -3,26 +3,24 @@ import CodeSnippet from "../../components/CodeSnippet";
 
 export default function Ideasurf() {
   return (
-    <div className="min-h-screen bg-white font-mono">
+    <div className="min-h-screen bg-white">
       <main className="max-w-3xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <Link
             href="/"
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-250 text-sm"
+            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
           >
             ← back to home
           </Link>
-          <div className="text-gray-600 text-xs">November 2025</div>
+          <div className="text-black text-xs">November 2025</div>
         </div>
 
         {/* Main Title */}
-        <h1 className="text-xl font-bold text-gray-800 mb-6">
-          Building ideasurf
-        </h1>
+        <h1 className="text-xl font-bold text-black mb-6">Building ideasurf</h1>
 
         {/* Content Section */}
-        <div className="space-y-4 text-gray-700 leading-relaxed text-sm">
+        <div className="space-y-4 text-black leading-relaxed text-sm">
           <div className="space-y-3">
             <p>
               Ideasurf is a platform that helps you generate ideas for your
@@ -50,7 +48,7 @@ export default function Ideasurf() {
           </div>
 
           {/* Sub-heading */}
-          <h2 className="text-xl font-bold text-gray-800 mt-6 mb-3">Extra</h2>
+          <h2 className="text-xl font-bold text-black mt-6 mb-3">Extra</h2>
 
           <div className="space-y-3">
             <p>
@@ -64,7 +62,7 @@ export default function Ideasurf() {
           {/* Code Snippet Component */}
           {/* YouTube Demo */}
           <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
+            <h3 className="text-xl font-semibold text-black mb-3">
               Deployed Website
             </h3>
             <p>
@@ -72,7 +70,7 @@ export default function Ideasurf() {
                 href="https://ideasurf.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline transition-all duration-250 hover:bg-gray-200 px-1 py-0.5 rounded text-align-center"
+                className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded text-align-center"
               >
                 https://ideasurf.xyz
               </a>

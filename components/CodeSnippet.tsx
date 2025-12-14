@@ -8,7 +8,7 @@ export default function CodeSnippet({
   language = "javascript",
 }: CodeSnippetProps) {
   return (
-    <div className="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm overflow-x-auto">
+    <div className="bg-black text-white p-6 rounded-lg text-sm overflow-x-auto border border-black">
       <div className="space-y-2">
         {code.split("\n").map((line, index) => (
           <div key={index} className="whitespace-pre">

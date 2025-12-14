@@ -73,7 +73,7 @@ export default function Home() {
           {/* Project 1` */}
           <div className="space-y-3">
             <a href="/pelosi" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/pelosi.png"
@@ -94,7 +94,7 @@ export default function Home() {
             </a>
 
             <a href="/hireme" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/hireme.png"
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </a>
             <a href="/ideasurf" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/IdeaSurf-removebg.png"
@@ -136,7 +136,7 @@ export default function Home() {
             </a>
 
             <a href="/mock-ai" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/mock.png"
@@ -160,7 +160,7 @@ export default function Home() {
 
             {/* Project 2 */}
             <a href="/ai-tutor" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/ai-tutor.png"
@@ -183,7 +183,7 @@ export default function Home() {
 
             {/* Project 3 */}
             <a href="/interview-prep" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/interview-prep.png"
@@ -204,7 +204,7 @@ export default function Home() {
               </div>
             </a>
             <a href="/goatforce" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/goatforce.png"
@@ -233,7 +233,7 @@ export default function Home() {
           </h2>
           <div className="space-y-3">
             <a href="/salesforce-recap" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/recap.jpeg"
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
             </a>
             <a href="/philosophy" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/life.jpeg"
@@ -270,7 +270,7 @@ export default function Home() {
               </div>
             </a>
             <a href="/game" className="block">
-              <div className="border border-black rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
+              <div className="rounded-lg p-3 flex items-center space-x-3 hover:bg-black transition-colors duration-250 group">
                 <div className="w-12 h-12 bg-white border border-black rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
                   <img
                     src="/images/game.jpeg"

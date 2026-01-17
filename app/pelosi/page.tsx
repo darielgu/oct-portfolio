@@ -1,76 +1,52 @@
-import Link from "next/link";
-import CodeSnippet from "../../components/CodeSnippet";
+import { PageLayout } from "@/components/page-layout"
 
-export default function Ideasurf() {
+export default function PelosiPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <Link
-            href="/"
-            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
-          >
-            ← back to home
-          </Link>
-          <div className="text-black text-xs">November 2025</div>
-        </div>
-
-        {/* Main Title */}
-        <h1 className="text-xl font-bold text-black mb-6">Pelosi Process</h1>
-
-        {/* Content Section */}
-        <div className="space-y-4 text-black leading-relaxed text-sm">
-          <div className="space-y-3">
-            <p>
-              The Pelosi Portfolio is a web application that tracks the stock
-              trades made by Nancy Pelosi and her husband, using publicly
-              available data from the PDRS reports. The application runs a CRON
-              job on this website to scrape the latest trades, pings all users
-              via email with the exact trade details, and displays the data in
-              an easy-to-read format.
-            </p>
-            <br />
-            <ul className="list-disc list-inside">
-              <li>SMTS</li>
-              <li>Next.js</li>
-              <li>FastAPI</li>
-              <li>Selenium</li>
-              <li>TypeScript</li>
-              <li>SupaBase</li>
-              <li>Vercel</li>
-            </ul>
+    <PageLayout>
+      <article className="space-y-8">
+        <header className="space-y-4">
+          <h1 className="text-2xl font-medium">pelosi portfolio</h1>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <span>November 2025</span>
+            <a
+              href="https://pelosi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground hover:opacity-60"
+            >
+              [live site]
+            </a>
           </div>
+        </header>
 
-          {/* Sub-heading */}
-          <h2 className="text-xl font-bold text-black mt-6 mb-3">Extra</h2>
+        <section className="space-y-4">
+          <p className="text-sm leading-relaxed">
+            The Pelosi Portfolio is a web application that tracks the stock trades made by Nancy Pelosi and her husband,
+            using publicly available data from the PDRS reports. The application runs a CRON job on this website to
+            scrape the latest trades, pings all users via email with the exact trade details, and displays the data in
+            an easy-to-read format.
+          </p>
+        </section>
 
-          <div className="space-y-3">
-            <p>
-              In the future I plan to scrape more congress members so we can see
-              and test other portfolios and potentially add an AI model trained
-              on pelosis trading habits and back test it against the real
-              market.
-            </p>
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium">tech stack</h2>
+          <div className="flex flex-wrap gap-2">
+            {["SMTS", "Next.js", "FastAPI", "Selenium", "TypeScript", "SupaBase", "Vercel"].map((tech) => (
+              <span key={tech} className="text-xs px-2 py-1 border border-border">
+                {tech}
+              </span>
+            ))}
           </div>
+        </section>
 
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold text-black mb-3">
-              Deployed Website
-            </h3>
-            <p>
-              <a
-                href="https://pelosi.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded text-align-center"
-              >
-                https://pelosi.vercel.app/
-              </a>
-            </p>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium">future plans</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            In the future I plan to scrape more congress members so we can see and test other portfolios and potentially
+            add an AI model trained on pelosis trading habits and back test it against the real market.
+          </p>
+        </section>
+      </article>
+    </PageLayout>
+  )
 }

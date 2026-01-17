@@ -1,87 +1,62 @@
-import Link from "next/link";
-import CodeSnippet from "../../components/CodeSnippet";
+import { PageLayout } from "@/components/page-layout"
 
-export default function Ideasurf() {
+export default function IdeasurfPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <Link
-            href="/"
-            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
-          >
-            ← back to home
-          </Link>
-          <div className="text-black text-xs">November 2025</div>
-        </div>
-
-        {/* Main Title */}
-        <h1 className="text-xl font-bold text-black mb-6">Building ideasurf</h1>
-
-        {/* Content Section */}
-        <div className="space-y-4 text-black leading-relaxed text-sm">
-          <div className="space-y-3">
-            <p>
-              Ideasurf is a platform that helps you generate ideas for your
-              startup. The core idea was to eliminate the friction between
-              different tools and create a unified interface that understands
-              natural language commands and finds all the projects on the
-              internet similar to your idea.
-            </p>
-            <p>
-              Honestly had a great time building this project, the basic
-              workflow is to scrape YC, A16z, etc - seed database with project
-              vector embeddings - query database with your idea - get similar
-              ideas!
-            </p>
-            <br />
-            <ul className="list-disc list-inside">
-              <li>Next.js</li>
-              <li>FastAPI</li>
-              <li>Selenium</li>
-              <li>TypeScript</li>
-              <li>SupaBase</li>
-              <li>Vercel</li>
-              <li>OpenAI Embeddings</li>
-            </ul>
+    <PageLayout>
+      <article className="space-y-8">
+        <header className="space-y-4">
+          <h1 className="text-2xl font-medium">ideasurf</h1>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <span>November 2025</span>
+            <a
+              href="https://ideasurf.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground hover:opacity-60"
+            >
+              [live site]
+            </a>
           </div>
+        </header>
 
-          {/* Sub-heading */}
-          <h2 className="text-xl font-bold text-black mt-6 mb-3">Extra</h2>
+        <section className="space-y-4">
+          <p className="text-sm leading-relaxed">
+            Ideasurf is a platform that helps you generate ideas for your startup. The core idea was to eliminate the
+            friction between different tools and create a unified interface that understands natural language commands
+            and finds all the projects on the internet similar to your idea.
+          </p>
+          <p className="text-sm leading-relaxed">
+            Honestly had a great time building this project, the basic workflow is to scrape YC, A16z, etc - seed
+            database with project vector embeddings - query database with your idea - get similar ideas!
+          </p>
+        </section>
 
-          <div className="space-y-3">
-            <p>
-              In the future I plan to scrape more sources like Crunchbase,
-              PitchBook, and other startup databases to get a more comprehensive
-              list of ideas. I also plan to add user voting & ranking to the
-              ideas to help prioritize the most popular ideas.
-            </p>
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium">tech stack</h2>
+          <div className="flex flex-wrap gap-2">
+            {["Next.js", "FastAPI", "Selenium", "TypeScript", "SupaBase", "Vercel", "OpenAI Embeddings"].map((tech) => (
+              <span key={tech} className="text-xs px-2 py-1 border border-border">
+                {tech}
+              </span>
+            ))}
           </div>
+        </section>
 
-          {/* Code Snippet Component */}
-          {/* YouTube Demo */}
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold text-black mb-3">
-              Deployed Website
-            </h3>
-            <p>
-              <a
-                href="https://ideasurf.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded text-align-center"
-              >
-                https://ideasurf.xyz
-              </a>
-            </p>
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium">future plans</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            In the future I plan to scrape more sources like Crunchbase, PitchBook, and other startup databases to get a
+            more comprehensive list of ideas. I also plan to add user voting & ranking to the ideas to help prioritize
+            the most popular ideas.
+          </p>
+        </section>
 
-            <div className="relative w-full overflow-hidden rounded-lg mt-1">
-              <img src="/images/vector.gif"></img>
-            </div>
+        <section className="space-y-3">
+          <div className="relative w-full overflow-hidden">
+            <img src="/images/vector.gif" alt="IdeaSurf demo" className="w-full h-auto" />
           </div>
-        </div>
-      </main>
-    </div>
-  );
+        </section>
+      </article>
+    </PageLayout>
+  )
 }

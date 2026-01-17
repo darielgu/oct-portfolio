@@ -1,58 +1,47 @@
-import React from "react";
-import Link from "next/link";
-const page = () => {
+import { PageLayout } from "@/components/page-layout"
+
+export default function PhilosophyPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <Link
-            href="/"
-            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
-          >
-            ← back to home
-          </Link>
-        </div>
+    <PageLayout>
+      <article className="space-y-8">
+        <header className="space-y-4">
+          <h1 className="text-2xl font-medium">philosophy</h1>
+          <p className="text-sm text-muted-foreground">things to live by</p>
+        </header>
 
-        {/* Main Title */}
-        <h1 className="text-xl font-bold text-black mb-6">
-          life & stuff from books
-        </h1>
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">1. Comparison is the thief of joy</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              There will always be someone richer, with a better paying job, in a better position. Be happy with your
+              life and all you have accomplished
+            </p>
+          </div>
 
-        {/* Content Section */}
-        {/* Content Section */}
-        <div className="space-y-4 text-black leading-relaxed text-sm">
-          <ol className="list-decimal pl-6 space-y-3">
-            <li>
-              <span className="font-semibold">
-                Comparison is the thief of joy
-              </span>{" "}
-              <br /> There will always be someone richer, with a better paying
-              job, in a better position. Be happy with your life and all you
-              have accomplished
-            </li>
-            <li>
-              <span className="font-semibold">Be nice</span> <br /> You never
-              know what people are going through, try to spread kindness and be
-              a positive impact on others
-            </li>
-            <li>
-              <span className="font-semibold">You can just do things</span>{" "}
-              <br /> Whatever it is you can do it. Do not wait for the perfect
-              circumstance seize what is in front of you & prove your work by
-              action
-            </li>
-            <li>
-              <span className="font-semibold">Momento Mori</span> <br /> No mean
-              to be cringe but remember that you will die. This awareness will
-              help you live a meaningful life and prioritize what truly matters
-              (fammily, goals, etc).
-            </li>
-          </ol>
-        </div>
-      </main>
-    </div>
-  );
-};
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">2. Be nice</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              You never know what people are going through, try to spread kindness and be a positive impact on others
+            </p>
+          </div>
 
-export default page;
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">3. You can just do things</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Whatever it is you can do it. Do not wait for the perfect circumstance seize what is in front of you &
+              prove your work by action
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">4. Momento Mori</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              No mean to be cringe but remember that you will die. This awareness will help you live a meaningful life
+              and prioritize what truly matters (family, goals, etc).
+            </p>
+          </div>
+        </section>
+      </article>
+    </PageLayout>
+  )
+}

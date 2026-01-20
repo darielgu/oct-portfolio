@@ -1,28 +1,29 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ProjectList } from "./project-list"
-import { BlogList } from "./blog-list"
+import { useState } from "react";
+import { ProjectList } from "./project-list";
+import { BlogList } from "./blog-list";
 
 export default function DeveloperProfile() {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleItemHover = (itemId: string | null) => {
     if (itemId) {
-      setIsLoading(true)
-      setTimeout(() => setIsLoading(false), 300)
+      setIsLoading(true);
+      setTimeout(() => setIsLoading(false), 300);
     }
-    setHoveredItem(itemId)
-  }
+    setHoveredItem(itemId);
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <div className="max-w-7xl mx-auto px-6 py-8 md:px-12 lg:px-16">
         <header className="mb-16 flex items-center justify-between">
-          <h1 className="text-sm font-normal text-foreground">dariel gutierrez</h1>
+          <h1 className="text-sm font-normal text-foreground">
+            dariel gutierrez
+          </h1>
           <div className="flex gap-6">
-   
             <a
               href="https://linkedin.com/in/dariel-gutierrez"
               target="_blank"
@@ -44,7 +45,7 @@ export default function DeveloperProfile() {
               github
             </a>
             <a
-              href="https://x.com/darielgu"
+              href="https://x.com/darielguu"
               target="_blank"
               rel="noopener noreferrer"
               className={`text-sm hover:opacity-60 transition-all duration-300 ${
@@ -63,16 +64,29 @@ export default function DeveloperProfile() {
                 hoveredItem ? "blur-[2px] opacity-40" : ""
               }`}
             >
-              {"I'm dariel. I study computer science and I love building software. Currently, I'm running "}
-              <a href="https://wco.sdsu.edu" className="text-sm hover:opacity-60 transition-all duration-300">
+              {
+                "I'm dariel. I study computer science and I love building software. Currently, I'm running "
+              }
+              <a
+                href="https://wco.sdsu.edu"
+                className="text-sm hover:opacity-60 transition-all duration-300"
+              >
                 WCO@SDSU
               </a>
-              {" where I help students @ SDSU break into the tech industry, working as a CS tutor & mentor at the "}
-              <a href="https://mslc.sdsu.edu/" className="text-sm hover:opacity-60 transition-all duration-300">
+              {
+                " where I help students @ SDSU break into the tech industry, working as a CS tutor & mentor at the "
+              }
+              <a
+                href="https://mslc.sdsu.edu/"
+                className="text-sm hover:opacity-60 transition-all duration-300"
+              >
                 MSLC
               </a>
               {" and working on my own projects (checkout my "}
-              <a href="https://github.com/darielgu" className="text-sm hover:opacity-60 transition-all duration-300">
+              <a
+                href="https://github.com/darielgu"
+                className="text-sm hover:opacity-60 transition-all duration-300"
+              >
                 github
               </a>
               {" if interested)"}
@@ -98,8 +112,7 @@ export default function DeveloperProfile() {
             />
           </div>
         </main>
-
       </div>
     </div>
-  )
+  );
 }

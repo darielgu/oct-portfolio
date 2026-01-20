@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import type { ReactNode } from "react"
+import Link from "next/link";
+import type { ReactNode } from "react";
 
 interface PageLayoutProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export function PageLayout({ children }: PageLayoutProps) {
@@ -12,13 +12,19 @@ export function PageLayout({ children }: PageLayoutProps) {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <div className="max-w-4xl mx-auto px-6 py-8 md:px-12 lg:px-16">
         <header className="mb-12">
-          <Link href="/" className="text-sm font-normal text-foreground hover:opacity-60 transition-opacity">
+          <Link
+            href="/"
+            className="text-sm font-normal text-foreground hover:opacity-60 transition-opacity"
+          >
             dariel gutierrez
           </Link>
         </header>
         <main>{children}</main>
         <footer className="mt-24 pt-8 border-t border-border flex gap-6">
-          <a href="mailto:darielgutierrez332@gmail.com" className="text-sm hover:opacity-60 transition-opacity">
+          <a
+            href="mailto:darielgutierrez332@gmail.com"
+            className="text-sm hover:opacity-60 transition-opacity"
+          >
             email
           </a>
           <a
@@ -38,7 +44,7 @@ export function PageLayout({ children }: PageLayoutProps) {
             github
           </a>
           <a
-            href="https://x.com/darielgu"
+            href="https://x.com/darielguu"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm hover:opacity-60 transition-opacity"
@@ -48,5 +54,5 @@ export function PageLayout({ children }: PageLayoutProps) {
         </footer>
       </div>
     </div>
-  )
+  );
 }

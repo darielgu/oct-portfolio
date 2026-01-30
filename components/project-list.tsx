@@ -12,6 +12,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "8",
+    name: "careermax",
+    description: "AI-driven resume optimization to help candidates beat ATS filters and land interviews",
+    date: "January 2026",
+    route: "/careermax",
+  },
+  {
     id: "1",
     name: "pelosi portfolio",
     description: "Get email alerts every time Nancy Pelosi trades",

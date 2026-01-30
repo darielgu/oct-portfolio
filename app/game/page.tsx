@@ -1,154 +1,161 @@
-import React from "react";
-import Link from "next/link";
-export default function game() {
+import { PageLayout } from "@/components/page-layout"
+
+export default function GamePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <Link
-            href="/"
-            className="text-black hover:bg-black hover:text-white transition-colors duration-250 text-sm px-1 py-0.5 rounded"
-          >
-            ← back to home
-          </Link>
-          <div className="text-black text-xs">October 2025</div>
-        </div>
+    <PageLayout>
+      <article className="space-y-8">
+        <header className="space-y-4">
+          <h1 className="text-2xl font-medium">what I wish I knew</h1>
+          <p className="text-sm text-muted-foreground">free Game</p>
+        </header>
 
-        {/* Main Title */}
-        <h1 className="text-xl font-bold text-black mb-6">
-          what i wish freshman me knew
-        </h1>
-
-        {/* Content Section */}
-        <div className="space-y-4 text-black leading-relaxed text-sm">
-          <ol className="list-decimal pl-6 space-y-3">
-            <li>
-              <span className="font-semibold">Jake's Resume Template:</span> If
-              you're not using something similar, use it.{" "}
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">1. Jake's Resume Template</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              If you're not using something similar, use it.{" "}
               <a
                 href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline transition-all duration-250 hover:bg-black hover:text-white px-1 py-0.5 rounded"
+                className="font-medium text-foreground hover:opacity-60"
               >
-                overleaf link
+                [overleaf link]
               </a>
-            </li>
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">LinkedIn Presence:</span> Get your
-              profile up with a professional headshot, 500+ connections, and all
-              experiences up to date.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">2. LinkedIn Presence</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Get your profile up with a professional headshot, 500+ connections, and all experiences up to date.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Take COMPE561:</span> it's a CompE
-              elective you can take as a CS elective and the professor is a
-              full-time SWE. You build a full stack app as your one assignment.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">3. Take COMPE561</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              It's a CompE elective you can take as a CS elective and the professor is a full-time SWE. You build a full
+              stack app as your one assignment.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Build real projects:</span> no one
-              cares about a YouTube tutorial project anymore. If you don't know
-              what to do, build a full stack/SaaS project deployed on a personal
-              domain with a logo & landing page that solves something (literally
-              anything).
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">4. Build real projects</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              No one cares about a YouTube tutorial project anymore. If you don't know what to do, build a full
+              stack/SaaS project deployed on a personal domain with a logo & landing page that solves something
+              (literally anything).
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">
-                Take a Full Stack Web Dev Course:
-              </span>{" "}
-              genuinely, school won't teach you what companies actually look
-              for. Get ahead and learn full stack web dev through YouTube or
-              Udemy.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">5. Take a Full Stack Web Dev Course</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Genuinely, school won't teach you what companies actually look for. Get ahead and learn full stack web dev
+              through YouTube or Udemy.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">COLD APPS ARE DEAD APPS:</span>{" "}
-              reach out to engineers at companies you want until you get a
-              response. Set up a coffee chat, be genuine, and ask for a referral
-              or if they have anyone else you can talk to. Submitting apps with
-              no referral is like throwing your resume in the trash unless your
-              resume is cracked.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">6. COLD APPS ARE DEAD APPS</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Reach out to engineers at companies you want until you get a response. Set up a coffee chat, be genuine,
+              and ask for a referral or if they have anyone else you can talk to. Submitting apps with no referral is
+              like throwing your resume in the trash unless your resume is cracked.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Get experience early:</span> reach
-              out to professors for research, small startups for roles, and stay
-              on the lookout for opportunities all the time.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">7. Get experience early</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Reach out to professors for research, small startups for roles, and stay on the lookout for opportunities
+              all the time.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Secret Sauce:</span> there are
-              many orgs supporting underrepresented groups in tech. If you are
-              part of one, find your org. Look into: Management Leadership for
-              Tomorrow, ColorStack, NSBE, Break Through Tech, Rewriting the
-              Code, SHPE, and many more.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">8. Secret Sauce</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              There are many orgs supporting underrepresented groups in tech. If you are part of one, find your org.
+              Look into: Management Leadership for Tomorrow, ColorStack, NSBE, Break Through Tech, Rewriting the Code,
+              SHPE, and many more.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Apply to NSF REUs:</span> paid
-              summer-long research positions across the country that are often
-              less competitive than internships and give great resume bullets
-              and networks. If you haven't had an internship, seriously look
-              into these — no one talks about them and it's insane 🤫
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">9. Apply to NSF REUs</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Paid summer-long research positions across the country that are often less competitive than internships
+              and give great resume bullets and networks. If you haven't had an internship, seriously look into these —
+              no one talks about them and it's insane
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Recruiting</span> map the
-              recruiting calendar (Aug–Oct: apps; Sep–Nov: interviews; Dec–Feb:
-              off-cycle). Reverse-plan study/projects so you're shipping by
-              August, not starting in August.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">10. Recruiting</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Map the recruiting calendar (Aug–Oct: apps; Sep–Nov: interviews; Dec–Feb: off-cycle). Reverse-plan
+              study/projects so you're shipping by August, not starting in August.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Portfolio That Converts:</span>
-              pin 3 repos with: clear README, short Loom demo, live link,
-              concise tech stack bullets, and a "what I learned" section. Make
-              it easy to skim in 30 seconds.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">11. Portfolio That Converts</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Pin 3 repos with: clear README, short Loom demo, live link, concise tech stack bullets, and a "what I
+              learned" section. Make it easy to skim in 30 seconds.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Interview Practice System:</span>
-              30–45 min/day. Mix: 2 data structure reps, 1 systems read, 10 min
-              behavioral story (STAR) refinement. Consistency beats cramming.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">12. Interview Practice System</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              30–45 min/day. Mix: 2 data structure reps, 1 systems read, 10 min behavioral story (STAR) refinement.
+              Consistency beats cramming.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Ship Publicly:</span>
-              tweet/linkedin post with a 30–60s demo clip, 1 code snippet, and a
-              takeaway. Visibility compounds and creates warm inbounds.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">13. Ship Publicly</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Tweet/linkedin post with a 30–60s demo clip, 1 code snippet, and a takeaway. Visibility compounds and
+              creates warm inbounds.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Join the Builders:</span>
-              go to hackathons/meetups. Aim to leave each event with new
-              linkedin connections. Follow up within 24 hours with a concrete
-              next step.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">14. Join the Builders</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Go to hackathons/meetups. Aim to leave each event with new linkedin connections. Follow up within 24 hours
+              with a concrete next step.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Resume Bullets:</span>
-              quantify with numbers and verbs: "reduced X from 120s → 8s (93%)
-              by caching + batching; +18% activation". Cut filler; keep impact.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">15. Resume Bullets</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Quantify with numbers and verbs: "reduced X from 120s → 8s (93%) by caching + batching; +18% activation".
+              Cut filler; keep impact.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Track The Pipeline:</span>
-              simple sheet with company, contact, status, date, next action. If
-              there's no next action, the task isn't done.
-            </li>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">16. Track The Pipeline</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Simple sheet with company, contact, status, date, next action. If there's no next action, the task isn't
+              done.
+            </p>
+          </div>
 
-            <li>
-              <span className="font-semibold">Daily 90-Min Block:</span> 30m
-              code, 30m learn, 30m network. Do it 5x/week for 12 weeks and you
-              will feel the compound effect.
-            </li>
-          </ol>
-        </div>
-      </main>
-    </div>
-  );
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">17. Daily 90-Min Block</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              30m code, 30m learn, 30m network. Do it 5x/week for 12 weeks and you will feel the compound effect.
+            </p>
+          </div>
+        </section>
+      </article>
+    </PageLayout>
+  )
 }

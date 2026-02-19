@@ -5,8 +5,9 @@ export default function PhilosophyPage() {
     <PageLayout>
       <article className="space-y-8">
         <header className="space-y-4">
-          <h1 className="text-2xl font-medium">philosophy</h1>
-          <p className="text-sm text-muted-foreground">things to live by</p>
+          <h1 className="text-2xl font-medium">
+            philosophy sayings whatever you'd like
+          </h1>
         </header>
 
         <section className="space-y-6">
@@ -17,11 +18,17 @@ export default function PhilosophyPage() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium"> Be nice</h2>
+            <h2 className="text-sm font-medium">
+              There are no guarantees, get to work, be intentional, why be
+              defined by what you don't know
+            </h2>
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">You can just do things</h2>
+            <h2 className="text-sm font-medium">
+              If we only wanted to be happy, it would be easy; but we want to be
+              happier than others
+            </h2>
           </div>
 
           <div className="space-y-2">

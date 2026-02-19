@@ -1,4 +1,4 @@
-import { PageLayout } from "@/components/page-layout"
+import { PageLayout } from "@/components/page-layout";
 
 export default function PhilosophyPage() {
   return (
@@ -11,37 +11,42 @@ export default function PhilosophyPage() {
 
         <section className="space-y-6">
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">1. Comparison is the thief of joy</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              There will always be someone richer, with a better paying job, in a better position. Be happy with your
-              life and all you have accomplished
-            </p>
+            <h2 className="text-sm font-medium">
+              Comparison is the thief of joy
+            </h2>
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">2. Be nice</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              You never know what people are going through, try to spread kindness and be a positive impact on others
-            </p>
+            <h2 className="text-sm font-medium"> Be nice</h2>
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">3. You can just do things</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Whatever it is you can do it. Do not wait for the perfect circumstance seize what is in front of you &
-              prove your work by action
-            </p>
+            <h2 className="text-sm font-medium">You can just do things</h2>
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">4. Momento Mori</h2>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              No mean to be cringe but remember that you will die. This awareness will help you live a meaningful life
-              and prioritize what truly matters (family, goals, etc).
-            </p>
+            <h2 className="text-sm font-medium">To dust you will return</h2>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">
+              There is nothing to escape except our own ideas of who we are
+            </h2>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">
+              To win any battle you must fight as you are already dead
+            </h2>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">
+              There is no audience to perform for. there is just you
+            </h2>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium">Okay, lets try again</h2>
           </div>
         </section>
       </article>
     </PageLayout>
-  )
+  );
 }

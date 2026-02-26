@@ -32,9 +32,6 @@ export default function PhilosophyPage() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-sm font-medium">To dust you will return</h2>
-          </div>
-          <div className="space-y-2">
             <h2 className="text-sm font-medium">
               There is nothing to escape except our own ideas of who we are
             </h2>
@@ -48,9 +45,6 @@ export default function PhilosophyPage() {
             <h2 className="text-sm font-medium">
               There is no audience to perform for. there is just you
             </h2>
-          </div>
-          <div className="space-y-2">
-            <h2 className="text-sm font-medium">Okay, lets try again</h2>
           </div>
         </section>
       </article>

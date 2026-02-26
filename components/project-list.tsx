@@ -12,6 +12,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "9",
+    name: "Suture AI",
+    description: "AI Implementation & Strategy firm",
+    date: "February 2026",
+    route: "https://gosutureai.com",
+  },
+  {
     id: "8",
     name: "careermax",
     description: "AI-driven resume optimization to help candidates beat ATS filters and land interviews",

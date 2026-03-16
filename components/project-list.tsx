@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 
 interface Project {
-  id: string
-  name: string
-  description: string
-  date: string
-  route: string
+  id: string;
+  name: string;
+  description: string;
+  date: string;
+  route: string;
 }
 
 const projects: Project[] = [
@@ -21,7 +21,8 @@ const projects: Project[] = [
   {
     id: "8",
     name: "careermax",
-    description: "AI-driven resume optimization to help candidates beat ATS filters and land interviews",
+    description:
+      "AI-driven resume optimization to help candidates beat ATS filters and land interviews",
     date: "January 2026",
     route: "/careermax",
   },
@@ -35,7 +36,8 @@ const projects: Project[] = [
   {
     id: "2",
     name: "hireme",
-    description: "Interview prep platform: everything you need to ace your next interview",
+    description:
+      "Interview prep platform: everything you need to ace your next interview",
     date: "November 2025",
     route: "/hireme",
   },
@@ -73,15 +75,16 @@ const projects: Project[] = [
   {
     id: "7",
     name: "goatforce",
-    description: "MCP powered CRM dashboard, one stop shop for sales reps to manage their deals",
+    description:
+      "MCP powered CRM dashboard, one stop shop for sales reps to manage their deals",
     date: "August 2025",
     route: "/goatforce",
   },
-]
+];
 
 interface ProjectListProps {
-  hoveredItem: string | null
-  onHover: (id: string | null) => void
+  hoveredItem: string | null;
+  onHover: (id: string | null) => void;
 }
 
 export function ProjectList({ hoveredItem, onHover }: ProjectListProps) {
@@ -92,18 +95,24 @@ export function ProjectList({ hoveredItem, onHover }: ProjectListProps) {
           href={project.route}
           key={project.id}
           className={`block py-1 cursor-pointer transition-all duration-300 ${
-            hoveredItem && hoveredItem !== project.id ? "blur-[2px] opacity-40" : ""
+            hoveredItem && hoveredItem !== project.id
+              ? "blur-[2px] opacity-40"
+              : ""
           }`}
           onMouseEnter={() => onHover(project.id)}
           onMouseLeave={() => onHover(null)}
         >
           <div className="flex items-baseline justify-between gap-4">
             <span className="text-sm font-medium">{project.name}</span>
-            <span className="text-[10px] text-muted-foreground whitespace-nowrap">{project.date}</span>
+            <span className="text-[10px] text-muted-foreground whitespace-nowrap">
+              {project.date}
+            </span>
           </div>
-          <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{project.description}</p>
+          <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+            {project.description}
+          </p>
         </Link>
       ))}
     </div>
-  )
+  );
 }

@@ -97,14 +97,14 @@ export default function DeveloperProfile() {
               >
                 MSLC
               </a>
-              {" and working on my own projects (checkout my "}
+              {" and working on my own projects, checkout my "}
               <a
                 href="https://github.com/darielgu"
                 className="text-sm hover:opacity-60 transition-all duration-300 micro-link"
               >
                 github
               </a>
-              {" if interested)"}
+              {" if interested or reachout ->"}
               <button
                 type="button"
                 onClick={handleCopyEmail}
@@ -141,7 +141,7 @@ export default function DeveloperProfile() {
                 </span>
               </button>
             </p>
-            <div className="mt-5 flex flex-wrap items-start gap-3 -ml-3">
+            <div className="mt-5 flex flex-wrap items-start gap-3 ">
               <SpotifyWidget dimmed={Boolean(hoveredItem)} />
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function DeveloperProfile() {
 
           <div className="space-y-12">
             <section className="calm-intro calm-intro-3">
-              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+              <h2 className="text-[11px] font-mono uppercase tracking-[0.08em] text-muted-foreground mb-3">
                 projects
               </h2>
               <ProjectList
@@ -168,14 +168,14 @@ export default function DeveloperProfile() {
             </section>
 
             <section className="calm-intro calm-intro-4">
-              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+              <h2 className="text-[11px] font-mono uppercase tracking-[0.08em] text-muted-foreground mb-3">
                 blogs
               </h2>
               <BlogList hoveredItem={hoveredItem} onHover={handleItemHover} />
             </section>
 
             <section className="calm-intro calm-intro-5">
-              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+              <h2 className="text-[11px] font-mono uppercase tracking-[0.08em] text-muted-foreground mb-3">
                 reading log
               </h2>
               <ReadingLogList

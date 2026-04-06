@@ -148,6 +148,44 @@
   }
 }
 
+@keyframes trace-wrap {
+  0% {
+    background-size:
+      0 1px,
+      1px 0,
+      0 1px,
+      1px 0;
+  }
+  25% {
+    background-size:
+      100% 1px,
+      1px 0,
+      0 1px,
+      1px 0;
+  }
+  50% {
+    background-size:
+      100% 1px,
+      1px 100%,
+      0 1px,
+      1px 0;
+  }
+  75% {
+    background-size:
+      100% 1px,
+      1px 100%,
+      100% 1px,
+      1px 0;
+  }
+  100% {
+    background-size:
+      100% 1px,
+      1px 100%,
+      100% 1px,
+      1px 100%;
+  }
+}
+
 @layer utilities {
   .calm-intro {
     opacity: 0;
@@ -207,6 +245,31 @@
       border-color 240ms ease,
       box-shadow 240ms ease,
       opacity 240ms ease;
+  }
+
+  .trace-border-card {
+    position: relative;
+  }
+
+  .trace-border-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    background:
+      linear-gradient(var(--foreground) 0 0) left bottom / 0 1px no-repeat,
+      linear-gradient(var(--foreground) 0 0) right bottom / 1px 0 no-repeat,
+      linear-gradient(var(--foreground) 0 0) right top / 0 1px no-repeat,
+      linear-gradient(var(--foreground) 0 0) left top / 1px 0 no-repeat;
+  }
+
+  .trace-border-card:hover::after,
+  .trace-border-card:focus-visible::after {
+    opacity: 0.7;
+    animation: trace-wrap 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   .page-presence {
@@ -330,7 +393,8 @@
     .micro-card,
     .micro-link,
     .micro-link::after,
-    .loading-pulse {
+    .loading-pulse,
+    .trace-border-card::after {
       animation: none;
       transition: none;
     }
@@ -339,6 +403,16 @@
     .page-content-stagger > * {
       opacity: 1;
       animation: none;
+    }
+
+    .trace-border-card:hover::after,
+    .trace-border-card:focus-visible::after {
+      opacity: 0.7;
+      background-size:
+        100% 1px,
+        1px 100%,
+        100% 1px,
+        1px 100%;
     }
   }
 }

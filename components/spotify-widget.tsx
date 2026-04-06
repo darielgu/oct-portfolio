@@ -56,7 +56,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
     };
   }, []);
 
-  const className = `w-full max-w-[23.5rem] rounded-md  bg-background/80 px-3 py-2 transition-all duration-300 micro-card ${
+  const className = `w-full max-w-[23.5rem]  bg-background/80 px-3 py-2 transition-all duration-300 trace-border-card ${
     dimmed ? "blur-[2px] opacity-40" : ""
   }`;
 
@@ -93,7 +93,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
       href={data.track.songUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${className} group block hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground/35`}
+      className={`${className} group block focus-visible:outline-none`}
     >
       <div className="flex items-start gap-2.5">
         {data.track.albumImageUrl ? (
@@ -105,7 +105,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
         ) : null}
         <div className="min-w-0 flex-1 -mt-2">
           <div className="flex items-start justify-end gap-2">
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 pt-1">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${
                   data.track.isPlaying ? "bg-foreground" : "bg-muted-foreground"

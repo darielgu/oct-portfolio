@@ -124,3 +124,56 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes calm-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .calm-intro {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .calm-intro {
+      animation-name: calm-fade-up;
+      animation-duration: 700ms;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      animation-fill-mode: forwards;
+    }
+
+    .calm-intro-1 {
+      animation-delay: 60ms;
+    }
+
+    .calm-intro-2 {
+      animation-delay: 160ms;
+    }
+
+    .calm-intro-3 {
+      animation-delay: 280ms;
+    }
+
+    .calm-intro-4 {
+      animation-delay: 360ms;
+    }
+
+    .calm-intro-5 {
+      animation-delay: 440ms;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .calm-intro {
+      opacity: 1;
+      animation: none;
+    }
+  }
+}

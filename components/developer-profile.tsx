@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ProjectList } from "./project-list";
 import { BlogList } from "./blog-list";
+import { SpotifyWidget } from "./spotify-widget";
 
 export default function DeveloperProfile() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -19,7 +20,7 @@ export default function DeveloperProfile() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <div className="max-w-7xl mx-auto px-6 py-8 md:px-12 lg:px-16">
-        <header className="mb-16 flex items-center justify-between">
+        <header className="mb-16 flex items-center justify-between calm-intro calm-intro-1">
           <h1 className="text-sm font-normal text-foreground">
             dariel gutierrez
           </h1>
@@ -57,7 +58,7 @@ export default function DeveloperProfile() {
           </div>
         </header>
 
-        <section className="mb-24">
+        <section className="mb-24 calm-intro calm-intro-2">
           <div className="max-w-lg">
             <p
               className={`text-sm leading-relaxed transition-all duration-300 ${
@@ -91,20 +92,21 @@ export default function DeveloperProfile() {
               </a>
               {" if interested)"}
             </p>
+            <SpotifyWidget dimmed={Boolean(hoveredItem)} />
           </div>
         </section>
 
         <main className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          <div>
+          <div className="calm-intro calm-intro-3">
             <ProjectList hoveredItem={hoveredItem} onHover={handleItemHover} />
           </div>
 
-          <div>
+          <div className="calm-intro calm-intro-4">
             <BlogList hoveredItem={hoveredItem} onHover={handleItemHover} />
           </div>
 
           {/* Loading Indicator */}
-          <div className="flex items-start justify-start md:justify-center">
+          <div className="flex items-start justify-start md:justify-center calm-intro calm-intro-5">
             <div
               className={`w-3 h-3 bg-foreground transition-opacity duration-200 ${
                 isLoading ? "opacity-100" : "opacity-0"

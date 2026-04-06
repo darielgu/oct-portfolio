@@ -28,12 +28,6 @@ const blogPosts: BlogPost[] = [
     description: "free Game",
     route: "/game",
   },
-  {
-    id: "b4",
-    title: "readings log",
-    description: "books 2026 >",
-    route: "/readlog",
-  },
 ];
 
 interface BlogListProps {

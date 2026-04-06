@@ -4,10 +4,12 @@ import { useState } from "react";
 import { ProjectList } from "./project-list";
 import { BlogList } from "./blog-list";
 import { SpotifyWidget } from "./spotify-widget";
+import { ReadingLogList } from "./reading-log-list";
 
 export default function DeveloperProfile() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isEmailCopied, setIsEmailCopied] = useState(false);
 
   const handleItemHover = (itemId: string | null) => {
     if (itemId) {
@@ -17,14 +19,26 @@ export default function DeveloperProfile() {
     setHoveredItem(itemId);
   };
 
+  const handleCopyEmail = async () => {
+    const email = ["darielgutierrez332", "gmail.com"].join("@");
+
+    try {
+      await navigator.clipboard.writeText(email);
+      setIsEmailCopied(true);
+      setTimeout(() => setIsEmailCopied(false), 1400);
+    } catch {
+      setIsEmailCopied(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <div className="max-w-7xl mx-auto px-6 py-8 md:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto px-6 py-8 md:px-12 lg:px-16 ">
         <header className="mb-16 flex items-center justify-between calm-intro calm-intro-1">
           <h1 className="text-sm font-normal text-foreground">
             dariel gutierrez
           </h1>
-          <div className="flex gap-6">
+          <div className="flex gap-6 ">
             <a
               href="https://linkedin.com/in/dariel-gutierrez"
               target="_blank"
@@ -91,27 +105,84 @@ export default function DeveloperProfile() {
                 github
               </a>
               {" if interested)"}
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className=" ml-2 group inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide hover:opacity-60 transition-all duration-300 micro-link cursor-pointer align-baseline"
+              >
+                <span
+                  className={`inline-block text-[10px] transition-transform duration-300 ${
+                    isEmailCopied
+                      ? "rotate-90"
+                      : "rotate-0 group-hover:rotate-45 group-active:rotate-90"
+                  }`}
+                >
+                  ▣
+                </span>
+                <span className="relative inline-flex h-4 min-w-[88px] items-center overflow-hidden leading-none">
+                  <span
+                    className={`transition-all duration-300 ${
+                      isEmailCopied
+                        ? "-translate-y-4 opacity-0"
+                        : "translate-y-0 opacity-100"
+                    }`}
+                  >
+                    email
+                  </span>
+                  <span
+                    className={`absolute transition-all duration-300 ${
+                      isEmailCopied
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-4 opacity-0"
+                    }`}
+                  >
+                    email copied
+                  </span>
+                </span>
+              </button>
             </p>
-            <SpotifyWidget dimmed={Boolean(hoveredItem)} />
+            <div className="mt-5 flex flex-wrap items-start gap-3 -ml-3">
+              <SpotifyWidget dimmed={Boolean(hoveredItem)} />
+            </div>
           </div>
         </section>
 
-        <main className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          <div className="calm-intro calm-intro-3">
-            <ProjectList hoveredItem={hoveredItem} onHover={handleItemHover} />
-          </div>
-
-          <div className="calm-intro calm-intro-4">
-            <BlogList hoveredItem={hoveredItem} onHover={handleItemHover} />
-          </div>
-
-          {/* Loading Indicator */}
-          <div className="flex items-start justify-start md:justify-center calm-intro calm-intro-5">
+        <main className="mb-24 max-w-2xl">
+          <div className="flex items-center gap-3 mb-8 calm-intro calm-intro-3">
             <div
-              className={`w-3 h-3 bg-foreground transition-opacity duration-200 ${
+              className={`w-2.5 h-2.5 bg-foreground transition-opacity duration-200 ${
                 isLoading ? "opacity-100" : "opacity-0"
               } ${isLoading ? "loading-pulse" : ""}`}
             />
+          </div>
+
+          <div className="space-y-12">
+            <section className="calm-intro calm-intro-3">
+              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+                projects
+              </h2>
+              <ProjectList
+                hoveredItem={hoveredItem}
+                onHover={handleItemHover}
+              />
+            </section>
+
+            <section className="calm-intro calm-intro-4">
+              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+                blogs
+              </h2>
+              <BlogList hoveredItem={hoveredItem} onHover={handleItemHover} />
+            </section>
+
+            <section className="calm-intro calm-intro-5">
+              <h2 className="text-xs uppercase tracking-wide text-muted-foreground mb-3">
+                reading log
+              </h2>
+              <ReadingLogList
+                hoveredItem={hoveredItem}
+                onHover={handleItemHover}
+              />
+            </section>
           </div>
         </main>
       </div>

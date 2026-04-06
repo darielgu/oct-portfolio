@@ -209,6 +209,14 @@
       opacity 240ms ease;
   }
 
+  .page-presence {
+    opacity: 0;
+  }
+
+  .page-content-stagger > * {
+    opacity: 0;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     .calm-intro {
       animation-name: calm-fade-up;
@@ -260,6 +268,56 @@
     .loading-pulse {
       animation: subtle-pulse 900ms ease-in-out infinite;
     }
+
+    .page-presence {
+      animation-name: calm-fade-up;
+      animation-duration: 700ms;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      animation-fill-mode: forwards;
+    }
+
+    .page-presence-1 {
+      animation-delay: 40ms;
+    }
+
+    .page-presence-2 {
+      animation-delay: 130ms;
+    }
+
+    .page-presence-3 {
+      animation-delay: 220ms;
+    }
+
+    .page-content-stagger > * {
+      animation-name: calm-fade-up;
+      animation-duration: 620ms;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      animation-fill-mode: forwards;
+    }
+
+    .page-content-stagger > *:nth-child(1) {
+      animation-delay: 190ms;
+    }
+
+    .page-content-stagger > *:nth-child(2) {
+      animation-delay: 250ms;
+    }
+
+    .page-content-stagger > *:nth-child(3) {
+      animation-delay: 320ms;
+    }
+
+    .page-content-stagger > *:nth-child(4) {
+      animation-delay: 390ms;
+    }
+
+    .page-content-stagger > *:nth-child(5) {
+      animation-delay: 460ms;
+    }
+
+    .page-content-stagger > *:nth-child(6) {
+      animation-delay: 520ms;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -275,6 +333,12 @@
     .loading-pulse {
       animation: none;
       transition: none;
+    }
+
+    .page-presence,
+    .page-content-stagger > * {
+      opacity: 1;
+      animation: none;
     }
   }
 }

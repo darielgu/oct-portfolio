@@ -56,14 +56,13 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
     };
   }, []);
 
-  const className = `mt-6 max-w-sm rounded-md border border-border/70 bg-background/80 px-3 py-2 transition-all duration-300 micro-card ${
+  const className = `w-full max-w-[23.5rem] rounded-md  bg-background/80 px-3 py-2 transition-all duration-300 micro-card ${
     dimmed ? "blur-[2px] opacity-40" : ""
   }`;
 
   if (loading) {
     return (
       <div className={className}>
-        <p className="text-[10px] uppercase tracking-wide text-muted-foreground">spotify</p>
         <p className="mt-1 text-xs text-muted-foreground">Loading music...</p>
       </div>
     );
@@ -72,7 +71,6 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
   if (!data?.available || !data.track) {
     return (
       <div className={className}>
-        <p className="text-[10px] uppercase tracking-wide text-muted-foreground">spotify</p>
         {data?.reason === "needs_auth" ? (
           <p className="mt-1 text-xs text-muted-foreground">
             Spotify setup not completed.
@@ -82,7 +80,9 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
             Missing Spotify client credentials.
           </p>
         ) : (
-          <p className="mt-1 text-xs text-muted-foreground">Nothing recent to show.</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Nothing recent to show.
+          </p>
         )}
       </div>
     );
@@ -100,12 +100,11 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
           <img
             src={data.track.albumImageUrl}
             alt={`${data.track.title} album art`}
-            className="mt-0.5 h-9 w-9 rounded-sm object-cover border border-border/70 transition-transform duration-300 group-hover:scale-[1.03]"
+            className="mt-0.5 h-9 w-9 rounded-sm object-cover border border-border/70 transition-transform duration-300 "
           />
         ) : null}
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <p className="text-[10px] uppercase tracking-wide text-muted-foreground">spotify</p>
+        <div className="min-w-0 flex-1 -mt-2">
+          <div className="flex items-start justify-end gap-2">
             <div className="flex items-center gap-1.5">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${
@@ -117,8 +116,10 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
               </span>
             </div>
           </div>
-          <p className="mt-1 truncate text-xs text-foreground">{data.track.title}</p>
-          <p className="truncate text-xs text-muted-foreground">{data.track.artist}</p>
+          <p className="truncate text-xs text-foreground">{data.track.title}</p>
+          <p className="truncate text-xs text-muted-foreground">
+            {data.track.artist}
+          </p>
         </div>
       </div>
     </a>

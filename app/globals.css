@@ -136,9 +136,77 @@
   }
 }
 
+@keyframes subtle-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @layer utilities {
   .calm-intro {
     opacity: 0;
+  }
+
+  .micro-link {
+    position: relative;
+    transition: opacity 220ms ease, color 220ms ease;
+  }
+
+  .micro-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.5;
+  }
+
+  .micro-link:hover::after,
+  .micro-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .micro-link:focus-visible {
+    outline: none;
+    opacity: 0.85;
+  }
+
+  .micro-item {
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    padding: 0.35rem 0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    transition:
+      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 240ms ease,
+      border-color 240ms ease,
+      background-color 240ms ease;
+  }
+
+  .micro-item:focus-visible {
+    outline: none;
+    border-color: color-mix(in oklab, var(--foreground) 22%, transparent);
+    background-color: color-mix(in oklab, var(--foreground) 5%, transparent);
+  }
+
+  .micro-card {
+    transition:
+      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 240ms ease,
+      box-shadow 240ms ease,
+      opacity 240ms ease;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -168,12 +236,45 @@
     .calm-intro-5 {
       animation-delay: 440ms;
     }
+
+    .micro-item:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in oklab, var(--foreground) 18%, transparent);
+      background-color: color-mix(in oklab, var(--foreground) 4%, transparent);
+    }
+
+    .micro-item:active {
+      transform: translateY(0);
+    }
+
+    .micro-card:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in oklab, var(--foreground) 18%, transparent);
+      box-shadow: 0 6px 18px -14px rgba(0, 0, 0, 0.45);
+    }
+
+    .micro-card:active {
+      transform: translateY(0);
+    }
+
+    .loading-pulse {
+      animation: subtle-pulse 900ms ease-in-out infinite;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .calm-intro {
       opacity: 1;
       animation: none;
+    }
+
+    .micro-item,
+    .micro-card,
+    .micro-link,
+    .micro-link::after,
+    .loading-pulse {
+      animation: none;
+      transition: none;
     }
   }
 }

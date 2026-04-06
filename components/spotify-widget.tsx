@@ -56,7 +56,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
     };
   }, []);
 
-  const className = `mt-6 max-w-sm rounded-md border border-border/70 bg-background/80 px-3 py-2 transition-all duration-300 ${
+  const className = `mt-6 max-w-sm rounded-md border border-border/70 bg-background/80 px-3 py-2 transition-all duration-300 micro-card ${
     dimmed ? "blur-[2px] opacity-40" : ""
   }`;
 
@@ -93,14 +93,14 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
       href={data.track.songUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${className} block hover:opacity-80`}
+      className={`${className} group block hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground/35`}
     >
       <div className="flex items-start gap-2.5">
         {data.track.albumImageUrl ? (
           <img
             src={data.track.albumImageUrl}
             alt={`${data.track.title} album art`}
-            className="mt-0.5 h-9 w-9 rounded-sm object-cover border border-border/70"
+            className="mt-0.5 h-9 w-9 rounded-sm object-cover border border-border/70 transition-transform duration-300 group-hover:scale-[1.03]"
           />
         ) : null}
         <div className="min-w-0 flex-1">

@@ -29,7 +29,7 @@ export default function DeveloperProfile() {
               href="https://linkedin.com/in/dariel-gutierrez"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm hover:opacity-60 transition-all duration-300 ${
+              className={`text-sm hover:opacity-60 transition-all duration-300 micro-link ${
                 hoveredItem ? "blur-[2px] opacity-40" : ""
               }`}
             >
@@ -39,7 +39,7 @@ export default function DeveloperProfile() {
               href="https://github.com/darielgu"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm hover:opacity-60 transition-all duration-300 ${
+              className={`text-sm hover:opacity-60 transition-all duration-300 micro-link ${
                 hoveredItem ? "blur-[2px] opacity-40" : ""
               }`}
             >
@@ -49,7 +49,7 @@ export default function DeveloperProfile() {
               href="https://x.com/darielguu"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm hover:opacity-60 transition-all duration-300 ${
+              className={`text-sm hover:opacity-60 transition-all duration-300 micro-link ${
                 hoveredItem ? "blur-[2px] opacity-40" : ""
               }`}
             >
@@ -70,7 +70,7 @@ export default function DeveloperProfile() {
               }
               <a
                 href="https://wco.sdsu.edu"
-                className="text-sm hover:opacity-60 transition-all duration-300"
+                className="text-sm hover:opacity-60 transition-all duration-300 micro-link"
               >
                 WCO@SDSU
               </a>
@@ -79,14 +79,14 @@ export default function DeveloperProfile() {
               }
               <a
                 href="https://mslc.sdsu.edu/"
-                className="text-sm hover:opacity-60 transition-all duration-300"
+                className="text-sm hover:opacity-60 transition-all duration-300 micro-link"
               >
                 MSLC
               </a>
               {" and working on my own projects (checkout my "}
               <a
                 href="https://github.com/darielgu"
-                className="text-sm hover:opacity-60 transition-all duration-300"
+                className="text-sm hover:opacity-60 transition-all duration-300 micro-link"
               >
                 github
               </a>
@@ -110,7 +110,7 @@ export default function DeveloperProfile() {
             <div
               className={`w-3 h-3 bg-foreground transition-opacity duration-200 ${
                 isLoading ? "opacity-100" : "opacity-0"
-              }`}
+              } ${isLoading ? "loading-pulse" : ""}`}
             />
           </div>
         </main>

@@ -48,13 +48,15 @@ export function BlogList({ hoveredItem, onHover }: BlogListProps) {
         <Link
           href={post.route}
           key={post.id}
-          className={`block py-1 cursor-pointer transition-all duration-300 ${
+          className={`block py-1 cursor-pointer transition-all duration-300 micro-item ${
             hoveredItem && hoveredItem !== post.id
               ? "blur-[2px] opacity-40"
               : ""
           }`}
           onMouseEnter={() => onHover(post.id)}
           onMouseLeave={() => onHover(null)}
+          onFocus={() => onHover(post.id)}
+          onBlur={() => onHover(null)}
         >
           <span className="text-sm font-medium">{post.title}</span>
           <p className="text-xs text-muted-foreground mt-1">

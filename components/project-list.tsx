@@ -95,13 +95,15 @@ export function ProjectList({ hoveredItem, onHover }: ProjectListProps) {
         <Link
           href={project.route}
           key={project.id}
-          className={`block py-1 cursor-pointer transition-all duration-300 ${
+          className={`block py-1 cursor-pointer transition-all duration-300 micro-item ${
             hoveredItem && hoveredItem !== project.id
               ? "blur-[2px] opacity-40"
               : ""
           }`}
           onMouseEnter={() => onHover(project.id)}
           onMouseLeave={() => onHover(null)}
+          onFocus={() => onHover(project.id)}
+          onBlur={() => onHover(null)}
         >
           <div className="flex items-baseline justify-between gap-4">
             <span className="text-sm font-medium">{project.name}</span>

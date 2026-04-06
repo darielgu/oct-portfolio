@@ -8,14 +8,9 @@ import { ReadingLogList } from "./reading-log-list";
 
 export default function DeveloperProfile() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [isEmailCopied, setIsEmailCopied] = useState(false);
 
   const handleItemHover = (itemId: string | null) => {
-    if (itemId) {
-      setIsLoading(true);
-      setTimeout(() => setIsLoading(false), 300);
-    }
     setHoveredItem(itemId);
   };
 
@@ -110,15 +105,6 @@ export default function DeveloperProfile() {
                 onClick={handleCopyEmail}
                 className=" ml-2 group inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide hover:opacity-60 transition-all duration-300 micro-link cursor-pointer align-baseline"
               >
-                <span
-                  className={`inline-block text-[10px] transition-transform duration-300 ${
-                    isEmailCopied
-                      ? "rotate-90"
-                      : "rotate-0 group-hover:rotate-45 group-active:rotate-90"
-                  }`}
-                >
-                  ▣
-                </span>
                 <span className="relative inline-flex h-4 min-w-[88px] items-center overflow-hidden leading-none">
                   <span
                     className={`transition-all duration-300 ${
@@ -127,7 +113,7 @@ export default function DeveloperProfile() {
                         : "translate-y-0 opacity-100"
                     }`}
                   >
-                    email
+                    copy email
                   </span>
                   <span
                     className={`absolute transition-all duration-300 ${
@@ -150,10 +136,13 @@ export default function DeveloperProfile() {
         <main className="mb-24 max-w-2xl">
           <div className="flex items-center gap-3 mb-8 calm-intro calm-intro-3">
             <div
-              className={`w-2.5 h-2.5 bg-foreground transition-opacity duration-200 ${
-                isLoading ? "opacity-100" : "opacity-0"
-              } ${isLoading ? "loading-pulse" : ""}`}
-            />
+              className={`hover-sigil ${
+                hoveredItem ? "hover-sigil-active" : ""
+              }`}
+            >
+              <span className="hover-sigil-ring" />
+              <span className="hover-sigil-core" />
+            </div>
           </div>
 
           <div className="space-y-12">

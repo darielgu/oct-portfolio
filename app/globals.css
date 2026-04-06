@@ -311,7 +311,7 @@
     height: 16px;
     border-radius: 2px;
     border: 1px solid color-mix(in oklab, var(--foreground) 24%, transparent);
-    opacity: 0.48;
+    opacity: 0;
     transform-origin: center;
     transition:
       opacity 220ms ease,

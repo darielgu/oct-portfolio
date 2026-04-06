@@ -186,24 +186,40 @@
   }
 }
 
-@keyframes sigil-rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes sigil-rotate-3d {
+  0% {
+    transform: perspective(180px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+      scale(1);
   }
-  to {
-    transform: rotate(180deg);
+  25% {
+    transform: perspective(180px) rotateX(7deg) rotateY(-6deg) rotateZ(45deg)
+      scale(1.01);
+  }
+  50% {
+    transform: perspective(180px) rotateX(-6deg) rotateY(7deg) rotateZ(95deg)
+      scale(0.99);
+  }
+  75% {
+    transform: perspective(180px) rotateX(5deg) rotateY(5deg) rotateZ(145deg)
+      scale(1.01);
+  }
+  100% {
+    transform: perspective(180px) rotateX(0deg) rotateY(0deg) rotateZ(180deg)
+      scale(1);
   }
 }
 
-@keyframes sigil-pulse {
+@keyframes sigil-glow {
   0%,
   100% {
-    transform: scale(0.8);
-    opacity: 0.5;
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--foreground) 14%, transparent),
+      0 0 12px -9px color-mix(in oklab, var(--foreground) 90%, transparent);
   }
   50% {
-    transform: scale(1);
-    opacity: 1;
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--foreground) 24%, transparent),
+      0 0 20px -7px color-mix(in oklab, var(--foreground) 95%, transparent);
   }
 }
 
@@ -291,57 +307,31 @@
 
   .hover-sigil {
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 2px;
-    border: 1px solid color-mix(in oklab, var(--foreground) 20%, transparent);
-    opacity: 0.4;
+    border: 1px solid color-mix(in oklab, var(--foreground) 24%, transparent);
+    opacity: 0.48;
+    transform-origin: center;
     transition:
       opacity 220ms ease,
-      border-color 220ms ease;
-  }
-
-  .hover-sigil-ring,
-  .hover-sigil-core {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    display: block;
-  }
-
-  .hover-sigil-ring {
-    width: 8px;
-    height: 8px;
-    border-radius: 1px;
-    border: 1px solid color-mix(in oklab, var(--foreground) 45%, transparent);
-    opacity: 0.5;
-  }
-
-  .hover-sigil-core {
-    width: 4px;
-    height: 4px;
-    border-radius: 1px;
-    background: var(--foreground);
-    opacity: 0.45;
+      border-color 220ms ease,
+      box-shadow 220ms ease;
   }
 
   .hover-sigil-active {
-    opacity: 0.9;
-    border-color: color-mix(in oklab, var(--foreground) 55%, transparent);
+    opacity: 1;
+    background: var(--foreground);
+    border-color: color-mix(in oklab, var(--foreground) 65%, transparent);
+    animation:
+      sigil-rotate-3d 1500ms cubic-bezier(0.22, 1, 0.36, 1) infinite,
+      sigil-glow 1900ms ease-in-out infinite;
   }
 
   .trace-border-card:hover::after,
   .trace-border-card:focus-visible::after {
     opacity: 0.7;
     animation: trace-wrap 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  .hover-sigil-active .hover-sigil-ring {
-    animation: sigil-rotate 1200ms linear infinite;
-  }
-
-  .hover-sigil-active .hover-sigil-core {
-    animation: sigil-pulse 900ms ease-in-out infinite;
   }
 
   .page-presence {
@@ -487,8 +477,7 @@
         1px 100%;
     }
 
-    .hover-sigil-active .hover-sigil-ring,
-    .hover-sigil-active .hover-sigil-core {
+    .hover-sigil-active {
       animation: none;
     }
   }

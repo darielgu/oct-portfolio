@@ -139,10 +139,7 @@ export default function DeveloperProfile() {
               className={`hover-sigil ${
                 hoveredItem ? "hover-sigil-active" : ""
               }`}
-            >
-              <span className="hover-sigil-ring" />
-              <span className="hover-sigil-core" />
-            </div>
+            />
           </div>
 
           <div className="space-y-12">

@@ -12,6 +12,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "11",
+    name: "2ndbrain",
+    description:
+      "Solves the \"I forgot who this is and what I promised\" problem with facial recognition, memory indexing, and Nia-powered retrieval; reposted by Nozomio on Twitter and judged by a founder",
+    date: "April 2026",
+    route: "https://secondbrain.aboutdariel.me",
+  },
+  {
     id: "10",
     name: "Automa",
     description:

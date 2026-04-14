@@ -12,6 +12,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "12",
+    name: "ai vs human writing detection",
+    description:
+      "BERT text classification model that detects whether writing is AI-generated or human-written",
+    date: "April 2026",
+    route: "https://561final.aboutdariel.me/",
+  },
+  {
     id: "11",
     name: "2ndbrain",
     description:

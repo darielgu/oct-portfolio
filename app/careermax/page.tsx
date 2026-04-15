@@ -1,8 +1,8 @@
-import { PageLayout } from "@/components/page-layout";
+import { ProjectPageLayout } from "@/components/project-page-layout";
 
 export default function CareermaxPage() {
   return (
-    <PageLayout>
+    <ProjectPageLayout>
       <article className="space-y-8">
         <header className="space-y-4">
           <h1 className="text-2xl font-medium">careermax</h1>
@@ -100,6 +100,6 @@ export default function CareermaxPage() {
           </p>
         </section>
       </article>
-    </PageLayout>
+    </ProjectPageLayout>
   );
 }

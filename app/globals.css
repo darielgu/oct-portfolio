@@ -4,26 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated background to match Studio Lathe's light gray */
-  --background: oklch(0.96 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(0.975 0.004 95);
+  --foreground: oklch(0.2 0.01 95);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.2 0.01 95);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.2 0.01 95);
+  --primary: oklch(0.2 0.01 95);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.91 0.004 95);
+  --secondary-foreground: oklch(0.2 0.01 95);
+  --muted: oklch(0.91 0.004 95);
+  --muted-foreground: oklch(0.43 0.01 95);
+  --accent: oklch(0.91 0.004 95);
+  --accent-foreground: oklch(0.2 0.01 95);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.85 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.84 0.005 95);
+  --input: oklch(0.88 0.004 95);
+  --ring: oklch(0.61 0.01 95);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -76,7 +75,7 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: Georgia, "Times New Roman", Times, serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,119 +119,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-@keyframes calm-fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes subtle-pulse {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(0.95);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes trace-wrap {
-  0% {
-    background-size:
-      0 1px,
-      1px 0,
-      0 1px,
-      1px 0;
-  }
-  25% {
-    background-size:
-      100% 1px,
-      1px 0,
-      0 1px,
-      1px 0;
-  }
-  50% {
-    background-size:
-      100% 1px,
-      1px 100%,
-      0 1px,
-      1px 0;
-  }
-  75% {
-    background-size:
-      100% 1px,
-      1px 100%,
-      100% 1px,
-      1px 0;
-  }
-  100% {
-    background-size:
-      100% 1px,
-      1px 100%,
-      100% 1px,
-      1px 100%;
-  }
-}
-
-@keyframes sigil-rotate-3d {
-  0% {
-    transform: perspective(180px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-      scale(1);
-  }
-  25% {
-    transform: perspective(180px) rotateX(7deg) rotateY(-6deg) rotateZ(45deg)
-      scale(1.01);
-  }
-  50% {
-    transform: perspective(180px) rotateX(-6deg) rotateY(7deg) rotateZ(95deg)
-      scale(0.99);
-  }
-  75% {
-    transform: perspective(180px) rotateX(5deg) rotateY(5deg) rotateZ(145deg)
-      scale(1.01);
-  }
-  100% {
-    transform: perspective(180px) rotateX(0deg) rotateY(0deg) rotateZ(180deg)
-      scale(1);
-  }
-}
-
-@keyframes sigil-glow {
-  0%,
-  100% {
-    box-shadow:
-      0 0 0 1px color-mix(in oklab, var(--foreground) 14%, transparent),
-      0 0 12px -9px color-mix(in oklab, var(--foreground) 90%, transparent);
-  }
-  50% {
-    box-shadow:
-      0 0 0 1px color-mix(in oklab, var(--foreground) 24%, transparent),
-      0 0 20px -7px color-mix(in oklab, var(--foreground) 95%, transparent);
-  }
-}
-
 @layer utilities {
-  .calm-intro {
-    opacity: 0;
+  .micro-page {
+    animation: micro-page-fade 420ms ease-out both;
   }
 
   .micro-link {
     position: relative;
+    text-decoration: none;
     transition:
-      opacity 220ms ease,
-      color 220ms ease;
+      opacity 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
   }
 
   .micro-link::after {
@@ -245,8 +149,8 @@
     background: currentColor;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
-    opacity: 0.5;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.7;
   }
 
   .micro-link:hover::after,
@@ -254,231 +158,80 @@
     transform: scaleX(1);
   }
 
+  .micro-link:hover,
   .micro-link:focus-visible {
+    opacity: 0.72;
+    transform: translateY(-1px);
     outline: none;
-    opacity: 0.85;
   }
 
   .micro-item {
-    border-radius: 0.5rem;
-    border: 1px solid transparent;
-    padding: 0.35rem 0.5rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
     transition:
-      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
-      opacity 240ms ease,
-      border-color 240ms ease,
-      background-color 240ms ease;
+      transform 180ms ease,
+      opacity 180ms ease,
+      filter 180ms ease;
   }
 
-  .micro-item:focus-visible {
-    outline: none;
-    border-color: color-mix(in oklab, var(--foreground) 22%, transparent);
-    background-color: color-mix(in oklab, var(--foreground) 5%, transparent);
+  .micro-item:hover,
+  .micro-item:focus-within {
+    transform: translateX(3px);
+    filter: brightness(0.96);
   }
 
-  .micro-card {
-    transition:
-      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 240ms ease,
-      box-shadow 240ms ease,
-      opacity 240ms ease;
-  }
-
-  .trace-border-card {
-    position: relative;
-  }
-
-  .trace-border-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
+  .micro-reveal {
     opacity: 0;
-    transition: opacity 180ms ease;
-    background:
-      linear-gradient(var(--foreground) 0 0) left bottom / 0 1px no-repeat,
-      linear-gradient(var(--foreground) 0 0) right bottom / 1px 0 no-repeat,
-      linear-gradient(var(--foreground) 0 0) right top / 0 1px no-repeat,
-      linear-gradient(var(--foreground) 0 0) left top / 1px 0 no-repeat;
+    animation: micro-rise 420ms ease-out both;
+    animation-delay: var(--reveal-delay, 0ms);
   }
 
-  .hover-sigil {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    border: 1px solid color-mix(in oklab, var(--foreground) 24%, transparent);
-    opacity: 0;
-    transform-origin: center;
-    transition:
-      opacity 220ms ease,
-      border-color 220ms ease,
-      box-shadow 220ms ease;
+  .reveal-1 {
+    --reveal-delay: 40ms;
   }
 
-  .hover-sigil-active {
-    opacity: 1;
-    background: var(--foreground);
-    border-color: color-mix(in oklab, var(--foreground) 65%, transparent);
-    animation:
-      sigil-rotate-3d 1500ms cubic-bezier(0.22, 1, 0.36, 1) infinite,
-      sigil-glow 1900ms ease-in-out infinite;
+  .reveal-2 {
+    --reveal-delay: 90ms;
   }
 
-  .trace-border-card:hover::after,
-  .trace-border-card:focus-visible::after {
-    opacity: 0.7;
-    animation: trace-wrap 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  .reveal-3 {
+    --reveal-delay: 140ms;
   }
 
-  .page-presence {
-    opacity: 0;
-  }
-
-  .page-content-stagger > * {
-    opacity: 0;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .calm-intro {
-      animation-name: calm-fade-up;
-      animation-duration: 700ms;
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-      animation-fill-mode: forwards;
-    }
-
-    .calm-intro-1 {
-      animation-delay: 60ms;
-    }
-
-    .calm-intro-2 {
-      animation-delay: 160ms;
-    }
-
-    .calm-intro-3 {
-      animation-delay: 280ms;
-    }
-
-    .calm-intro-4 {
-      animation-delay: 360ms;
-    }
-
-    .calm-intro-5 {
-      animation-delay: 440ms;
-    }
-
-    .micro-item:hover {
-      transform: translateY(-1px);
-      /* border-color: color-mix(in oklab, var(--foreground) 18%, transparent); */
-      background-color: color-mix(in oklab, var(--foreground) 4%, transparent);
-    }
-
-    .micro-item:active {
-      transform: translateY(0);
-    }
-
-    .micro-card:hover {
-      transform: translateY(-1px);
-      border-color: color-mix(in oklab, var(--foreground) 18%, transparent);
-      box-shadow: 0 6px 18px -14px rgba(0, 0, 0, 0.45);
-    }
-
-    .micro-card:active {
-      transform: translateY(0);
-    }
-
-    .loading-pulse {
-      animation: subtle-pulse 900ms ease-in-out infinite;
-    }
-
-    .page-presence {
-      animation-name: calm-fade-up;
-      animation-duration: 700ms;
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-      animation-fill-mode: forwards;
-    }
-
-    .page-presence-1 {
-      animation-delay: 40ms;
-    }
-
-    .page-presence-2 {
-      animation-delay: 130ms;
-    }
-
-    .page-presence-3 {
-      animation-delay: 220ms;
-    }
-
-    .page-content-stagger > * {
-      animation-name: calm-fade-up;
-      animation-duration: 620ms;
-      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-      animation-fill-mode: forwards;
-    }
-
-    .page-content-stagger > *:nth-child(1) {
-      animation-delay: 190ms;
-    }
-
-    .page-content-stagger > *:nth-child(2) {
-      animation-delay: 250ms;
-    }
-
-    .page-content-stagger > *:nth-child(3) {
-      animation-delay: 320ms;
-    }
-
-    .page-content-stagger > *:nth-child(4) {
-      animation-delay: 390ms;
-    }
-
-    .page-content-stagger > *:nth-child(5) {
-      animation-delay: 460ms;
-    }
-
-    .page-content-stagger > *:nth-child(6) {
-      animation-delay: 520ms;
-    }
+  .reveal-4 {
+    --reveal-delay: 190ms;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .calm-intro {
-      opacity: 1;
+    .micro-page,
+    .micro-reveal {
       animation: none;
+      opacity: 1;
     }
 
-    .micro-item,
-    .micro-card,
     .micro-link,
-    .micro-link::after,
-    .loading-pulse,
-    .trace-border-card::after {
-      animation: none;
+    .micro-item {
       transition: none;
     }
+  }
+}
 
-    .page-presence,
-    .page-content-stagger > * {
-      opacity: 1;
-      animation: none;
-    }
+@keyframes micro-page-fade {
+  from {
+    opacity: 0;
+  }
 
-    .trace-border-card:hover::after,
-    .trace-border-card:focus-visible::after {
-      opacity: 0.7;
-      background-size:
-        100% 1px,
-        1px 100%,
-        100% 1px,
-        1px 100%;
-    }
+  to {
+    opacity: 1;
+  }
+}
 
-    .hover-sigil-active {
-      animation: none;
-    }
+@keyframes micro-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

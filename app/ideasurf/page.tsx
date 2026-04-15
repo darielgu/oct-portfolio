@@ -1,8 +1,8 @@
-import { PageLayout } from "@/components/page-layout"
+import { ProjectPageLayout } from "@/components/project-page-layout";
 
 export default function IdeasurfPage() {
   return (
-    <PageLayout>
+    <ProjectPageLayout>
       <article className="space-y-8">
         <header className="space-y-4">
           <h1 className="text-2xl font-medium">ideasurf</h1>
@@ -57,6 +57,6 @@ export default function IdeasurfPage() {
           </div>
         </section>
       </article>
-    </PageLayout>
+    </ProjectPageLayout>
   )
 }

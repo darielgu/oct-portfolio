@@ -1,27 +1,21 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 
-export default function ReadLogPage() {
+interface ProjectPageLayoutProps {
+  children: ReactNode;
+}
+
+export function ProjectPageLayout({ children }: ProjectPageLayoutProps) {
   return (
     <main className="min-h-screen bg-background px-6 py-20 text-base leading-relaxed text-foreground md:px-8">
       <div className="mx-auto w-full max-w-2xl space-y-10">
         <p>
-          <Link className="micro-link inline-block" href="/">
+          <Link className="micro-link micro-item inline-block" href="/">
             dariel gutierrez
           </Link>
         </p>
 
-        <header className="space-y-2">
-          <p className="text-muted-foreground">books.</p>
-        </header>
-
-        <section className="space-y-3">
-          <p className="text-muted-foreground">2026</p>
-          <div className="space-y-2">
-            <p>Meditations</p>
-            <p>Deep Work</p>
-            <p>Designing Data Intensive Applications</p>
-          </div>
-        </section>
+        <div>{children}</div>
 
         <footer className="mt-24 border-t border-border pt-8 text-muted-foreground">
           <p>

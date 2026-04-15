@@ -1,8 +1,8 @@
-import { PageLayout } from "@/components/page-layout"
+import { ProjectPageLayout } from "@/components/project-page-layout";
 
 export default function HiremePage() {
   return (
-    <PageLayout>
+    <ProjectPageLayout>
       <article className="space-y-8">
         <header className="space-y-4">
           <h1 className="text-2xl font-medium">hireme</h1>
@@ -12,14 +12,15 @@ export default function HiremePage() {
           </div>
         </header>
 
-        <section className="aspect-video w-full">
-          <iframe
-            src="https://www.youtube.com/embed/21IXrUmlsgA?si=s_uR0ze1jw8Y6p3Y"
-            title="HireMe Demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full border border-border"
-          />
+        <section className="space-y-2">
+          <a
+            href="https://www.youtube.com/watch?v=21IXrUmlsgA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="micro-link micro-item inline-block text-sm text-foreground"
+          >
+            view here
+          </a>
         </section>
 
         <section className="space-y-4">
@@ -48,6 +49,6 @@ export default function HiremePage() {
           </p>
         </section>
       </article>
-    </PageLayout>
+    </ProjectPageLayout>
   )
 }

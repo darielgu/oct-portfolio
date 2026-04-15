@@ -1,8 +1,8 @@
-import { PageLayout } from "@/components/page-layout"
+import { ProjectPageLayout } from "@/components/project-page-layout";
 
 export default function AITutorPage() {
   return (
-    <PageLayout>
+    <ProjectPageLayout>
       <article className="space-y-8">
         <header className="space-y-4">
           <h1 className="text-2xl font-medium">ai tutor</h1>
@@ -11,14 +11,15 @@ export default function AITutorPage() {
           </div>
         </header>
 
-        <section className="aspect-video w-full">
-          <iframe
-            src="https://www.youtube.com/embed/ihNwD7CMXH0?si=fz7Y1i2TFRue1f7h"
-            title="AI Tutor Demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full border border-border"
-          />
+        <section className="space-y-2">
+          <a
+            href="https://www.youtube.com/watch?v=ihNwD7CMXH0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="micro-link micro-item inline-block text-sm text-foreground"
+          >
+            view here
+          </a>
         </section>
 
         <section className="space-y-4">
@@ -50,6 +51,6 @@ export default function AITutorPage() {
           </p>
         </section>
       </article>
-    </PageLayout>
+    </ProjectPageLayout>
   )
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { TextEffect } from "@/components/ui/text-effect";
 
 interface SpotifyTrack {
   isPlaying: boolean;
@@ -58,7 +57,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
     };
   }, []);
 
-  const className = `w-full max-w-[23.5rem] bg-background/80 px-3 py-2 transition-all duration-300 trace-border-card ${
+  const className = `w-full max-w-[28rem] border border-border/80 bg-background/50 px-3 py-3 transition-all duration-300 ${
     dimmed ? "blur-[2px] opacity-40" : ""
   }`;
 
@@ -80,13 +79,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className={className}
         >
-          <TextEffect
-            per="word"
-            preset="blur"
-            className="mt-1 text-xs text-muted-foreground"
-          >
-            Loading music...
-          </TextEffect>
+          <p className="text-muted-foreground">loading music...</p>
         </motion.div>
       ) : !data?.available || !data.track ? (
         <motion.div
@@ -97,7 +90,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className={className}
         >
-          <p className="mt-1 text-xs text-muted-foreground">
+          <p className="text-muted-foreground">
             {feedbackMessage}
           </p>
         </motion.div>
@@ -111,7 +104,7 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
           href={data.track.songUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${className} group block focus-visible:outline-none`}
+          className={`${className} micro-link micro-item block focus-visible:outline-none`}
         >
           <div className="flex items-start gap-2.5">
             {data.track.albumImageUrl ? (
@@ -121,8 +114,8 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
                 className="mt-0.5 h-9 w-9 rounded-sm object-cover border border-border/70"
               />
             ) : null}
-            <div className="min-w-0 flex-1 -mt-2">
-              <div className="flex items-start justify-end gap-2">
+            <div className="min-w-0 flex-1">
+              <div className="mb-1 flex items-start justify-end gap-2">
                 <div className="flex items-center gap-1.5 pt-1">
                   <span
                     className={`h-1.5 w-1.5 rounded-full ${
@@ -131,26 +124,13 @@ export function SpotifyWidget({ dimmed = false }: SpotifyWidgetProps) {
                         : "bg-muted-foreground"
                     }`}
                   />
-                  <span className="text-[10px] text-muted-foreground">
+                  <span className="text-muted-foreground">
                     {data.track.isPlaying ? "Now playing" : "Last played"}
                   </span>
                 </div>
               </div>
-              <TextEffect
-                per="word"
-                preset="blur"
-                className="truncate text-xs text-foreground"
-              >
-                {data.track.title}
-              </TextEffect>
-              <TextEffect
-                per="word"
-                preset="fade"
-                delay={0.08}
-                className="truncate text-xs text-muted-foreground"
-              >
-                {data.track.artist}
-              </TextEffect>
+              <p className="truncate text-foreground">{data.track.title}</p>
+              <p className="truncate text-muted-foreground">{data.track.artist}</p>
             </div>
           </div>
         </motion.a>

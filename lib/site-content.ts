@@ -82,7 +82,7 @@ export const projects: SiteLink[] = [
 export const blogs: SiteLink[] = [
   {
     title: "summer 2025",
-    description: "Deep dive into my summer @ salesforce.",
+    description: "summer @ salesforce",
     href: "/salesforce-recap",
   },
   {

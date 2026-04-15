@@ -6,7 +6,7 @@ export default function SalesforceRecapPage() {
       <article className="space-y-8">
         <header className="space-y-4">
           <h1 className="text-2xl font-medium">summer 2025</h1>
-          <p className="text-sm text-muted-foreground">Deep dive into my summer @ salesforce</p>
+          <p className="text-sm text-muted-foreground">summer @ salesforce</p>
         </header>
 
         <section className="space-y-4">

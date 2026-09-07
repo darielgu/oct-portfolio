@@ -1,59 +1,26 @@
-import Link from "next/link";
+import { SiteShell } from "@/components/site-shell";
+import { books } from "@/lib/site-content";
+
+export const metadata = { title: "Bookshelf · Dariel Gutierrez" };
 
 export default function ReadLogPage() {
+  const years = Array.from(new Set(books.map((b) => b.date ?? "")));
+
   return (
-    <main className="min-h-screen bg-background px-6 py-20 text-base leading-relaxed text-foreground md:px-8">
-      <div className="mx-auto w-full max-w-2xl space-y-10">
-        <p>
-          <Link className="micro-link inline-block" href="/">
-            dariel gutierrez
-          </Link>
-        </p>
-
-        <header className="space-y-2">
-          <p className="text-muted-foreground">books.</p>
-        </header>
-
-        <section className="space-y-3">
-          <p className="text-muted-foreground">2026</p>
-          <div className="space-y-2">
-            <p>Meditations</p>
-            <p>Deep Work</p>
-            <p>Designing Data Intensive Applications</p>
-          </div>
-        </section>
-
-        <footer className="mt-24 border-t border-border pt-8 text-muted-foreground">
-          <p>
-            <a
-              href="https://x.com/darielguu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="micro-link"
-            >
-              x
-            </a>{" "}
-            |{" "}
-            <a
-              href="https://github.com/darielgu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="micro-link"
-            >
-              github
-            </a>{" "}
-            |{" "}
-            <a
-              href="https://linkedin.com/in/dariel-gutierrez"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="micro-link"
-            >
-              linkedin
-            </a>
-          </p>
-        </footer>
-      </div>
-    </main>
+    <SiteShell>
+      <h1>Bookshelf</h1>
+      {years.map((year) => (
+        <div key={year}>
+          <h2>{year}</h2>
+          <ul>
+            {books
+              .filter((b) => b.date === year)
+              .map((b) => (
+                <li key={b.title}>{b.title}</li>
+              ))}
+          </ul>
+        </div>
+      ))}
+    </SiteShell>
   );
 }

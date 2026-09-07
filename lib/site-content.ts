@@ -14,7 +14,7 @@ export type SiteLink = {
 export const photo = { src: "/images/recap.jpeg", alt: "Dariel Gutierrez" };
 
 /** leave empty to hide the email line */
-export const email = "";
+export const email = "darielguu@gmail.com";
 
 /** right-hand page list, in order */
 export const nav: SiteLink[] = [

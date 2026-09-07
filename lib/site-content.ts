@@ -16,6 +16,62 @@ export const photo = { src: "/images/recap.jpeg", alt: "Dariel Gutierrez" };
 /** leave empty to hide the email line */
 export const email = "darielguu@gmail.com";
 
+/** ascii art shown under the bio on the about page */
+export const asciiArt = `                                !??!^
+                              7G&&&##P!
+                             :Y&&&&#B#BJ
+                              :!YG&&#&&#^
+                                  :?YG&&Y^:
+                                      P&B~
+                                  :: ~G&#5
+                                J#G??G&&BGY~
+                               ~55:^5###B5J?!
+                                    ?7Y5BGPY7?^
+                                  !J555B#&#GYY~
+                                 7GB##&#&&&&&GJ~
+                               ^P#B5YJYPYJP&&#Y?
+                             ^YPJ~^!?JPGB#&&&#P!
+                                 ^??JGBG555B&#BJ
+                                    :!^^ :~JB##G:
+                                            75BB?
+                                         :^:!?P#5
+                                        ^!??YPGBP:
+                                     :^!Y5PPGPBG5:
+                                  :~?7YPBB#BGBBP~
+   ^!~^::                   ^~~?55PPG#B######BP^
+   :!Y5P7?~~^:  : :::^~!JJYPBBB###&&&&&&&&##G~
+   :^!7YG#BGP5YJJY5PPGBB#####&&&&&&&&&&&##G?
+    :^~!YG##&&#&#####B##B######&&&&&&&##BG!
+    ::^!7Y5PPGGGPPPGB#GGPPYPP5BB##&&&&#GPP^
+      ^^~!?7J77Y5G5PP5YJ??!!?75PB##&##BBGP^
+      :^^~~~~!7J5PYJ7!~~ ::^^!J5PBB##BBBGBJ
+      : : ::^!?7?!!~:^       ~?J5G###B#B#BG^
+           :^?7!~~::        ::!JGB####B##G#P
+           :^!?^            :^?75G####BBB#BB?
+          :^^^:             :!7JGB##&##BBBBBP7:
+           :                ^7J5BB#BG#BGB#B#B#GY~:
+                           :^?J5BBGGB#G#BBBGB#&&&#G55J7!^^:
+                           :~?Y5PGGBBBBBBBGGBGB###B#BB#BBBBP55JYJ??!^:
+                           ~!J75PGPPPGB5P5GGGB##BBBGG5YP55Y?77!~^:
+                         : ~7YYPGGGP5P5PP5PPGGGGGGP5Y7J7!~~^ :
+                          ~?P5PBGPPPPPP5Y5JY5PBPGPY7?~!:::
+                         ^~JP5GPGGPPGPP5Y5?Y5GPPY7?~^:
+                        ^?J55P5PG5GGGP5YJY?YP5PYY!!^ :
+                       :!?JGG5P5G5PPG5YJ7YY5PP5Y7!~^:
+                      :~?Y5PG555PGPB5P5Y7YPG5YJ7?~^::
+                      ^7J5BBG5YP5PBPYPPJJ55555J7?~:::
+                     ::?JP#BYYYP5GBP5PYY5PY5JJ7?!^:
+                      :^?YGGGYJP5PP55YYYPJJJ!?!!^
+                      :^~75G5PYGPPYPYPPPYJJ?^~~:::
+                      :^!YYPPY5YYY557YY5Y!!^~:: ::
+                       ~?7JY55YYJYYYYJ7!!:::
+                       ^!7Y5PJJYY5Y7??!^:::
+                      :~!J55J77YJ77~~:^::
+                      ~!??YJ7777!^^
+                      ~!?JJJ?!!^::
+                     ^^!7YJ77~^:
+                    ::~~?7!!~~::`;
+
 /** right-hand page list, in order */
 export const nav: SiteLink[] = [
   { title: "About", href: "/" },

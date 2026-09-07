@@ -1,5 +1,5 @@
 import { SiteShell } from "@/components/site-shell";
-import { email, photo } from "@/lib/site-content";
+import { asciiArt, email, photo } from "@/lib/site-content";
 
 export default function Home() {
   return (
@@ -29,6 +29,10 @@ export default function Home() {
           Email: <a href={`mailto:${email}`}>{email}</a>.
         </p>
       ) : null}
+
+      <pre className="ascii" aria-hidden="true">
+        {asciiArt}
+      </pre>
     </SiteShell>
   );
 }

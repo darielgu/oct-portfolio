@@ -97,6 +97,16 @@ img {
   margin-bottom: 1.5em;
 }
 
+/* ascii art on the about page */
+.ascii {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 7px;
+  line-height: 1.15;
+  color: var(--muted);
+  margin: 2.5em 0 0;
+  overflow-x: auto;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -121,6 +131,11 @@ img {
 
   .nav li:first-child {
     width: 100%;
+  }
+
+  /* shrink the art so the whole shape fits on a phone */
+  .ascii {
+    font-size: clamp(5px, 1.55vw, 7px);
   }
 }
 

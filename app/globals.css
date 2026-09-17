@@ -147,3 +147,30 @@ img {
 .micro-item {
   display: inline;
 }
+
+/* copy-paste prompt blocks on the referrals page */
+.prompt {
+  position: relative;
+  margin: 0 0 1.4em;
+}
+
+.prompt pre {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 2.4em 1em 1em;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.prompt button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}

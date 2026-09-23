@@ -1,0 +1,80 @@
+% Darius Morgan - fictional resume template
+% Replace all sample details and metrics with your own. Compile with pdfLaTeX.
+\documentclass[letterpaper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\titleformat{\section}{\large\scshape}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\setlist[itemize]{leftmargin=16pt,topsep=1pt,itemsep=1pt,parsep=0pt}
+\newcommand{\entry}[2]{\noindent\textbf{#1}\hfill #2\par}
+\newcommand{\role}[2]{\noindent\textit{#1}\hfill\textit{#2}\par}
+\begin{document}
+\begin{center}
+{\Huge\bfseries Darius Morgan}\\[3pt]
+San Diego, CA $|$ (619) 555-0142 $|$
+\href{mailto:darius@example.com}{darius@example.com} $|$
+\href{https://portfolio.example.com}{portfolio.example.com}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\entry{Pacific Valley University}{San Diego, CA}
+\role{Bachelor of Science in Computer Science | GPA: 3.8 / 4.0}{May 2027}
+\textbf{Relevant Coursework:} Data Structures \& Algorithms, Operating Systems, Machine Learning, Database Systems, Full-Stack Web Development, Computer Networks\par
+\textbf{Activities \& Organizations:} Coding Club (President), Engineering Society, Peer Tutoring Program\par
+\section{Technical Skills}
+\textbf{Languages:} Python, TypeScript, JavaScript, Java, C++, SQL\par
+\textbf{Frameworks \& Libraries:} React, Next.js, Node.js, Express, FastAPI, PyTorch\par
+\textbf{Infrastructure \& Tools:} AWS, Docker, Git, PostgreSQL, Redis, MongoDB, REST APIs\par
+\section{Experience}
+\entry{CloudPeak Software}{May 2026 - Aug 2026}
+\role{Software Engineer Intern, Customer Platform}{San Francisco, CA}
+\begin{itemize}
+\item Built a customer onboarding flow using \textbf{React and TypeScript}, helping 120 pilot users connect their accounts and complete setup without manual support.
+\item Created reusable form components and server-side validation, reducing incomplete onboarding submissions by \textbf{28\%} during a six-week pilot.
+\item Resolved file-upload failures and duplicate account creation bugs by tracing API requests, adding error handling, and writing regression tests.
+\item Collaborated with design and product to ship four onboarding improvements; documented release steps and monitored errors after deployment.
+\end{itemize}
+\entry{BrightBridge Labs}{Jun 2025 - Aug 2025}
+\role{Software Engineer Intern}{San Diego, CA}
+\begin{itemize}
+\item Built an internal analytics dashboard with \textbf{React, Node.js, and PostgreSQL}, combining customer activity and support metrics in one interface.
+\item Reduced average dashboard load time from \textbf{3.2 seconds to 1.4 seconds} by indexing database queries and caching frequently requested results.
+\item Automated weekly reporting for a five-person operations team, saving approximately \textbf{4 hours per week} and removing manual spreadsheet updates.
+\end{itemize}
+\entry{CampusConnect}{Jan 2026 - Present}
+\role{Student Developer \& Co-Founder}{San Diego, CA}
+\begin{itemize}
+\item Launched a campus event discovery app that lets students browse organizations, save events, and receive reminders; recruited \textbf{85 student testers}.
+\item Implemented authentication, event search, and organizer dashboards using Next.js and PostgreSQL; used tester feedback to simplify the event publishing flow.
+\end{itemize}
+\entry{Pacific Valley University, Robotics Lab}{Feb 2025 - May 2025}
+\role{Undergraduate Research Assistant}{San Diego, CA}
+\begin{itemize}
+\item Developed a \textbf{Python and C++} simulation pipeline for mobile robots; evaluated navigation performance across 40 test scenarios and reduced average path deviation by \textbf{18\%}.
+\end{itemize}
+\section{Projects}
+\entry{StudyStack | Next.js, Python, Vector Search}{Campus Hackathon Finalist}
+\begin{itemize}
+\item Built a study assistant that searches uploaded lecture notes and returns answers with source references; tested retrieval quality against \textbf{100 student-written questions}.
+\item Added document chunking, embedding search, and file validation to support searchable notes across multiple classes.
+\end{itemize}
+\entry{InterviewReady | React, FastAPI, AWS}{Personal Project}
+\begin{itemize}
+\item Created a mock interview platform that generates role-specific practice questions and saves recorded responses for review; deployed the API and frontend to AWS.
+\end{itemize}
+\entry{BudgetBuddy | Python, SQL, Streamlit}{Team Project}
+\begin{itemize}
+\item Built a spending dashboard that imports transaction CSVs, categorizes purchases, and visualizes monthly trends; added input validation and tests for malformed transaction data.
+\end{itemize}
+\end{document}

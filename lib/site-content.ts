@@ -75,6 +75,7 @@ export const asciiArt = `                                !??!^
 /** right-hand page list, in order */
 export const nav: SiteLink[] = [
   { title: "About", href: "/" },
+  { title: "Resume", href: "/resume" },
   { title: "Bookshelf", href: "/readlog" },
   { title: "Philosophy", href: "/philosophy" },
   { title: "GitHub", href: "https://github.com/darielgu", external: true },
